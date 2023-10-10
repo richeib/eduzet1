@@ -6,8 +6,10 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
+import 'package:shimmer/shimmer.dart';
 
 import '../widgets/colour.dart';
+import 'ohome.dart';
 
 class CollegeAppling extends StatefulWidget {
   const CollegeAppling({super.key});
@@ -21,41 +23,41 @@ class _CollegeApplingState extends State<CollegeAppling> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      bottomNavigationBar: Container(
-        margin: EdgeInsets.all(5),
-        height: 60,
-        width: double.infinity,
-        decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(50),
-            color: ColorResources.btcolour),
-        child: GNav(
-            color: Colors.transparent,
-            activeColor: Colors.white,
-            tabBackgroundColor: Color.fromARGB(80, 4, 50, 158),
-            curve: Curves.easeOutExpo,
-            padding: EdgeInsets.symmetric(horizontal: 30, vertical: 10),
-            gap: 5,
-            tabs: [
-              GButton(
-                icon: Icons.monitor,
-                iconColor: Colors.white,
-                text: 'Home',
-              ),
-              GButton(
-                  icon: Icons.work_sharp,
-                  iconColor: Colors.white,
-                  text: 'Apply Now',
-                  onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => CollegePage()));
-                  }),
-              GButton(
-                icon: Icons.call,
-                iconColor: Colors.white,
-                text: 'Call Us',
-              )
-            ]),
-      ),
+      // bottomNavigationBar: Container(
+      //   margin: EdgeInsets.all(5),
+      //   height: 60,
+      //   width: double.infinity,
+      //   decoration: BoxDecoration(
+      //       borderRadius: BorderRadius.circular(50),
+      //       color: ColorResources.btcolour),
+      //   child: GNav(
+      //       color: Colors.transparent,
+      //       activeColor: Colors.white,
+      //       tabBackgroundColor: Color.fromARGB(80, 4, 50, 158),
+      //       curve: Curves.easeOutExpo,
+      //       padding: EdgeInsets.symmetric(horizontal: 30, vertical: 10),
+      //       gap: 5,
+      //       tabs: [
+      //         GButton(
+      //           icon: Icons.monitor,
+      //           iconColor: Colors.white,
+      //           text: 'Home',
+      //         ),
+      //         GButton(
+      //             icon: Icons.work_sharp,
+      //             iconColor: Colors.white,
+      //             text: 'Apply Now',
+      //             onPressed: () {
+      //               Navigator.push(context,
+      //                   MaterialPageRoute(builder: (context) => CollegePage()));
+      //             }),
+      //         GButton(
+      //           icon: Icons.call,
+      //           iconColor: Colors.white,
+      //           text: 'Call Us',
+      //         )
+      //       ]),
+      // ),
       appBar: AppBar(
         leading: const BackButton(
           color: Colors.black,
@@ -174,14 +176,15 @@ class _CollegeApplingState extends State<CollegeAppling> {
                       Text(
                         'Electronics &\nIntrumentation',
                         style: GoogleFonts.poppins(
-                          fontSize: Dimensions.fontSizeOverLarge,
-                          color: ColorResources.txcolour,
+                          fontSize: 20,
+                          fontWeight: FontWeight.w400,
+                          color: Colors.black,
                         ),
                       ),
                       Text(
-                        "RS 20000",
+                        "₹20,000",
                         style: GoogleFonts.poppins(
-                            fontSize: Dimensions.fontSizeOverLarge,
+                            fontSize: 29,
                             color: ColorResources.txcolour,
                             fontWeight: FontWeight.w600),
                       ),
@@ -490,6 +493,83 @@ class _CollegeApplingState extends State<CollegeAppling> {
             ),
           ],
         ),
+      ),
+      floatingActionButton: Row(
+        children: [
+          const SizedBox(
+            width: 30,
+          ),
+          InkWell(
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => DefaultHome()));
+            },
+            child: Container(
+              decoration: BoxDecoration(
+                  color: ColorResources.btcolour,
+                  borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(25),
+                      bottomLeft: Radius.circular(25))),
+              height: 54,
+              width: 120,
+              child: Center(
+                  child: Icon(
+                Icons.home_max,
+                color: Colors.white,
+              )),
+            ),
+          ),
+          InkWell(
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => CollegePage()));
+            },
+            child: Container(
+                height: 54,
+                width: 140,
+                color: ColorResources.btcolour,
+                child: Center(
+                  child: Container(
+                    height: 40,
+                    width: 140,
+                    decoration: BoxDecoration(
+                        color: Color(0xFFd45092),
+                        borderRadius: BorderRadius.all(Radius.circular(20))),
+                    child: Center(
+                      child: Shimmer.fromColors(
+                        baseColor: Colors.white,
+                        highlightColor: Colors.pink,
+                        child: Text(
+                          '✔️ Apply Now',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            fontSize: Dimensions.fontSizeDefault,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                )),
+          ),
+          InkWell(
+            onTap: () {},
+            child: Container(
+              decoration: BoxDecoration(
+                  color: ColorResources.btcolour,
+                  borderRadius: BorderRadius.only(
+                      topRight: Radius.circular(25),
+                      bottomRight: Radius.circular(25))),
+              height: 54,
+              width: 120,
+              child: Center(
+                  child: Icon(
+                Icons.call,
+                color: Colors.white,
+              )),
+            ),
+          ),
+        ],
       ),
     );
   }

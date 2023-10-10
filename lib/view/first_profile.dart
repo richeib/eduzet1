@@ -14,7 +14,7 @@ class Profile extends StatelessWidget {
     return Scaffold(
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.only(left: 40, right: 40, top: 12),
+          padding: EdgeInsets.only(left: 40, right: 40, top: 25),
           child: Column(
             children: [
               Text(
