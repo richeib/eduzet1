@@ -120,7 +120,7 @@ class _CollegeselectingState extends State<Collegeselecting> {
                               builder: (context) => const CollegeAppling()));
                     },
                     child: Container(
-                      height: 110,
+                      height: 105,
                       margin: EdgeInsets.all(10),
                       width: 40,
                       decoration: BoxDecoration(
@@ -137,6 +137,7 @@ class _CollegeselectingState extends State<Collegeselecting> {
                         children: [
                           Image(
                               width: 110,
+                              height: 100,
                               image: AssetImage("assets/globee.png")),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -146,10 +147,10 @@ class _CollegeselectingState extends State<Collegeselecting> {
                                     MainAxisAlignment.spaceBetween,
                                 children: [
                                   Text(
-                                    "Attapadi university",
+                                    "ABC university",
                                     style: GoogleFonts.poppins(
                                       color: ColorResources.txcolour,
-                                      fontSize: Dimensions.fontSizeLarge,
+                                      fontSize: Dimensions.fontSizeExtraLarge,
                                       fontWeight: FontWeight.w500,
                                     ),
                                   ),
@@ -157,10 +158,10 @@ class _CollegeselectingState extends State<Collegeselecting> {
                                     width: 20,
                                   ),
                                   Text(
-                                    "20000",
+                                    "₹20000",
                                     style: GoogleFonts.poppins(
                                       color: ColorResources.txcolour,
-                                      fontSize: Dimensions.fontSizeLarge,
+                                      fontSize: Dimensions.fontSizeExtraLarge1,
                                       fontWeight: FontWeight.w600,
                                     ),
                                   ),
@@ -171,18 +172,18 @@ class _CollegeselectingState extends State<Collegeselecting> {
                               ),
                               Text("china",
                                   style: GoogleFonts.poppins(
-                                    fontSize: Dimensions.fontSizeSmall,
-                                    color: ColorResources.txcolour,
+                                    fontSize: Dimensions.fontSizeExtraSmall,
+                                    color: Color(0xff939393),
                                   )),
                               const SizedBox(
-                                height: 10,
+                                height: 8,
                               ),
                               Row(
                                 children: [
                                   Text(
-                                    "remote",
+                                    "Remote",
                                     style: GoogleFonts.poppins(
-                                      fontSize: Dimensions.fontSizeSmall,
+                                      fontSize: Dimensions.fontSizeExtraSmall,
                                       color: Colors.pink,
                                       fontWeight: FontWeight.w400,
                                       letterSpacing: 0.20,
@@ -192,19 +193,21 @@ class _CollegeselectingState extends State<Collegeselecting> {
                                     width: 15,
                                   ),
                                   Text(
-                                    '6 days more',
+                                    '6 days left',
                                     style: TextStyle(
                                         color: Colors.grey,
-                                        fontSize: Dimensions.fontSizeSmall),
+                                        fontSize:
+                                            Dimensions.fontSizeExtraSmall),
                                   ),
                                   const SizedBox(
-                                    width: 53,
+                                    width: 88,
                                   ),
-                                  Icon(
-                                    Icons.favorite_border_outlined,
-                                    size: 35,
-                                    color: Colors.grey,
-                                  ),
+                                  // Icon(
+                                  //   Icons.favorite_border_outlined,
+                                  //   size: 35,
+                                  //   color: Colors.grey,
+                                  // ),
+                                  Image.asset('assets/Like.png')
                                 ],
                               )
                             ],

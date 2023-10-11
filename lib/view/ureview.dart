@@ -18,7 +18,7 @@ class _ReviewState extends State<Review> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: DashboardScreen(),
+      // bottomNavigationBar: DashboardScreen(),
       backgroundColor: Colors.white,
       appBar: AppBar(
         leading: const BackButton(
@@ -75,15 +75,14 @@ class _ReviewState extends State<Review> {
           ),
         ),
         Container(
-          height: 578,
-          width: double.infinity,
+          height: 685,
           child: ListView.builder(
               itemCount: 20,
               itemBuilder: (BuildContext context, var index) {
                 return Column(
                   children: [
                     Padding(
-                      padding: EdgeInsets.only(left: 30, right: 30),
+                      padding: EdgeInsets.only(left: 25, right: 25),
                       child: Column(
                         children: [
                           Row(
@@ -105,7 +104,7 @@ class _ReviewState extends State<Review> {
                                 ),
                               ),
                               SizedBox(
-                                width: 214,
+                                width: 190,
                               ),
                               Icon(
                                 Icons.thumb_up_off_alt,
@@ -150,7 +149,7 @@ class _ReviewState extends State<Review> {
                                 ),
                               ),
                               SizedBox(
-                                width: 55,
+                                width: 25,
                               ),
                               Text(
                                 '12 min ago',

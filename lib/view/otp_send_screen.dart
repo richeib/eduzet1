@@ -72,7 +72,7 @@ class _optState extends State<opt> {
         title: Text(
           "Verify it's you",
           style: GoogleFonts.poppins(
-              fontSize: Dimensions.fontSizeDefault,
+              fontSize: Dimensions.fontSizeLarge,
               fontWeight: FontWeight.w600,
               color: Colors.black),
         ),

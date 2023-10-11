@@ -1,6 +1,5 @@
 import 'package:eduzet/utill/dimensions.dart';
-import 'package:eduzet/view/pnotification.dart';
-import 'package:eduzet/view/qwhishlist.dart';
+
 import 'package:eduzet/view/tprofile.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -49,7 +48,7 @@ class DefaultHome extends StatelessWidget {
                           width: 150,
                         ),
                         SizedBox(
-                          width: 135,
+                          width: 115,
                         ),
                         Column(
                           children: [

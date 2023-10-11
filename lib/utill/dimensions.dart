@@ -3,7 +3,10 @@ class Dimensions {
   static const double fontSizeSmall = 12.0;
   static const double fontSizeDefault = 14.0;
   static const double fontSizeLarge = 16.0;
+
   static const double fontSizeExtraLarge = 18.0;
+  static const double fontSizeExtraLarge1 = 20.0;
+  static const double fontSizeExtraLarge2 = 22.0;
   static const double fontSizeOverLarge = 24.0;
 
   static const double paddingSizeExtraSmall = 5.0;
@@ -20,6 +23,4 @@ class Dimensions {
   static const double radiusDefault = 10.0;
   static const double radiusLarge = 15.0;
   static const double radiusExtraLarge = 20.0;
-
-
 }

@@ -103,12 +103,12 @@ class selectLocation extends StatelessWidget {
                     ),
                     labelText: 'Search location',
                     labelStyle:
-                        GoogleFonts.poppins(fontSize: 15, color: Colors.grey),
+                        GoogleFonts.poppins(fontSize: 10, color: Colors.grey),
                     border: InputBorder.none,
                   ),
                 )),
               ),
-              height: 45,
+              height: 40,
               width: 333,
             ),
             SizedBox(

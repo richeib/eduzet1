@@ -55,7 +55,7 @@ class CustomButton extends StatelessWidget {
                   btnTxt!,
                   textAlign: TextAlign.center,
                   style: GoogleFonts.poppins(
-                      fontSize: Dimensions.fontSizeSmall,
+                      fontSize: Dimensions.fontSizeDefault,
                       textStyle: TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
@@ -131,7 +131,7 @@ class CustomButton1 extends StatelessWidget {
                       btnTxta!,
                       textAlign: TextAlign.center,
                       style: GoogleFonts.poppins(
-                        fontSize: Dimensions.fontSizeLarge,
+                        fontSize: Dimensions.fontSizeExtraLarge,
                         fontWeight: FontWeight.w500,
                         textStyle: TextStyle(color: Colors.white),
                       ),
@@ -140,7 +140,7 @@ class CustomButton1 extends StatelessWidget {
                       btnTxta1!,
                       textAlign: TextAlign.center,
                       style: GoogleFonts.poppins(
-                        fontSize: Dimensions.fontSizeSmall,
+                        fontSize: Dimensions.fontSizeExtraSmall,
                         fontWeight: FontWeight.w500,
                         textStyle: TextStyle(color: Colors.white),
                       ),

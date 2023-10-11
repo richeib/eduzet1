@@ -55,9 +55,9 @@ class _CollegePageState extends State<CollegePage> {
                   children: [
                     Container(
                       child: Text(
-                        'Attapadi College of\nArt & Science',
+                        'Hindustan College of\nArt & Science',
                         style: GoogleFonts.poppins(
-                            fontSize: Dimensions.fontSizeOverLarge,
+                            fontSize: Dimensions.fontSizeExtraLarge2,
                             color: ColorResources.txcolour,
                             fontWeight: FontWeight.w500),
                       ),
@@ -77,7 +77,9 @@ class _CollegePageState extends State<CollegePage> {
                   SizedBox(width: 20),
                   Text(
                     'Delhi',
-                    style: TextStyle(color: Colors.grey),
+                    style: TextStyle(
+                        color: Colors.grey,
+                        fontSize: Dimensions.fontSizeDefault),
                   ),
                 ],
               ),
@@ -89,11 +91,14 @@ class _CollegePageState extends State<CollegePage> {
                   SizedBox(
                     width: 20,
                   ),
-                  Text('5.0'),
+                  Text(
+                    '5.0',
+                    style: TextStyle(fontSize: 12),
+                  ),
                   Align(
                     alignment: Alignment.topLeft,
                     child: RatingBar.builder(
-                      itemSize: 20,
+                      itemSize: 12,
                       initialRating: 3,
                       minRating: 1,
                       direction: Axis.horizontal,
@@ -154,17 +159,15 @@ class _CollegePageState extends State<CollegePage> {
                       },
                       child: Container(
                         width: double.infinity,
-                        padding: const EdgeInsets.symmetric(
-                            vertical: 10, horizontal: 10),
                         decoration: BoxDecoration(
                             color: const Color(0xFF1f2b5d),
                             borderRadius: BorderRadius.circular(10)),
                         child: Column(
                           children: [
                             Text(
-                              "• Accredited by National Assessment and Accreditation Council (NAAC) of UGC \n• All India Council for Technical Education (AICTE)",
+                              "• Accredited by National Assessment and Accreditation\n Council (NAAC) of UGC \n• All India Council for Technical Education (AICTE)",
                               style: GoogleFonts.poppins(
-                                fontSize: Dimensions.fontSizeSmall,
+                                fontSize: Dimensions.fontSizeExtraSmall,
                                 fontWeight: FontWeight.w400,
                                 color: Colors.white,
                               ),

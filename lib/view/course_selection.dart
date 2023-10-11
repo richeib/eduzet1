@@ -72,7 +72,7 @@ class _CourseSelectionState extends State<CourseSelection> {
                 style: GoogleFonts.poppins(
                     fontSize: 35,
                     color: ColorResources.txcolour,
-                    fontWeight: FontWeight.w500),
+                    fontWeight: FontWeight.w600),
               )
             ],
           ),
@@ -90,7 +90,7 @@ class _CourseSelectionState extends State<CourseSelection> {
                               builder: (context) => const Collegeselecting()));
                     },
                     child: Container(
-                      height: 90,
+                      height: 85,
                       margin: const EdgeInsets.symmetric(
                           horizontal: 10, vertical: 10),
                       padding: const EdgeInsets.symmetric(
@@ -115,7 +115,8 @@ class _CourseSelectionState extends State<CourseSelection> {
                                 "Computer science",
                                 style: GoogleFonts.poppins(
                                     color: ColorResources.txcolour,
-                                    fontSize: Dimensions.fontSizeLarge),
+                                    fontSize: Dimensions.fontSizeDefault,
+                                    fontWeight: FontWeight.w500),
                               ),
                               const SizedBox(
                                 height: 10,
@@ -123,17 +124,19 @@ class _CourseSelectionState extends State<CourseSelection> {
                               Text("2 year - Full Time",
                                   style: GoogleFonts.poppins(
                                       color: ColorResources.btcolour,
-                                      fontSize: Dimensions.fontSizeSmall))
+                                      fontSize: 11,
+                                      fontWeight: FontWeight.w400))
                             ],
                           ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.end,
-                            children: const [
-                              Icon(
-                                Icons.favorite_border_outlined,
-                                size: 35,
-                                color: Colors.grey,
-                              ),
+                            children: [
+                              // Icon(
+                              //   Icons.favorite_border_outlined,
+                              //   size: 35,
+                              //   color: Colors.grey,
+                              // ),
+                              Image.asset('assets/Like.png')
                             ],
                           )
                         ],
@@ -163,10 +166,25 @@ class _CourseSelectionState extends State<CourseSelection> {
               height: 54,
               width: 210,
               child: Center(
-                child: Text(
-                  'Search',
-                  style: TextStyle(
-                      fontSize: Dimensions.fontSizeSmall, color: Colors.white),
+                child: Row(
+                  children: [
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Icon(
+                      Icons.search_outlined,
+                      color: Colors.white,
+                    ),
+                    SizedBox(
+                      width: 15,
+                    ),
+                    Text(
+                      'Search',
+                      style: TextStyle(
+                          fontSize: Dimensions.fontSizeDefault,
+                          color: Colors.white),
+                    ),
+                  ],
                 ),
               ),
             ),
@@ -186,10 +204,25 @@ class _CourseSelectionState extends State<CourseSelection> {
               height: 54,
               width: 150,
               child: Center(
-                child: Text(
-                  'Call us',
-                  style: TextStyle(
-                      fontSize: Dimensions.fontSizeSmall, color: Colors.white),
+                child: Row(
+                  children: [
+                    SizedBox(
+                      width: 15,
+                    ),
+                    Icon(
+                      Icons.call_outlined,
+                      color: Colors.white,
+                    ),
+                    SizedBox(
+                      width: 15,
+                    ),
+                    Text(
+                      'Call us',
+                      style: TextStyle(
+                          fontSize: Dimensions.fontSizeDefault,
+                          color: Colors.white),
+                    ),
+                  ],
                 ),
               ),
             ),

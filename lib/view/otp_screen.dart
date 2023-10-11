@@ -21,55 +21,69 @@ class OtpScreen extends StatelessWidget {
             const SizedBox(
               height: 28,
             ),
-            SizedBox(height: 120, width: 150, child: Image.asset('assets/Eduzet_Logo.png')),
-            Lottie.asset('animation/animation_lkj9vinn.json', width: 150 * ffem, height: 150 * ffem),
+            SizedBox(
+                height: 120,
+                width: 150,
+                child: Image.asset('assets/Eduzet_Logo.png')),
+            Lottie.asset('animation/animation_lkj9vinn.json',
+                width: 150 * ffem, height: 150 * ffem),
             const SizedBox(
               height: 25,
             ),
             Text(
               'Enter your Number',
-              style: GoogleFonts.poppins(fontSize: Dimensions.fontSizeDefault, color: ColorResources.txcolour),
+              style: GoogleFonts.poppins(
+                  fontSize: Dimensions.fontSizeDefault,
+                  color: ColorResources.txcolour),
             ),
             SizedBox(
               height: 25,
             ),
             Center(
               child: Container(
+                height: 51,
                 padding: EdgeInsets.only(left: 20),
                 width: 330,
-                decoration: BoxDecoration(border: Border.all(width: 1, color: ColorResources.txcolour), borderRadius: BorderRadius.circular(50)),
-                child: IntrinsicHeight(
-                  child: Row(
-                    children: [
-                      Text(
-                        "+91",
+                decoration: BoxDecoration(
+                    border:
+                        Border.all(width: 1, color: ColorResources.txcolour),
+                    borderRadius: BorderRadius.circular(50)),
+                child: Row(
+                  children: [
+                    Text(
+                      "+91",
+                      style: GoogleFonts.poppins(
+                        fontSize: Dimensions.fontSizeDefault,
+                        color: const Color(0xFF929292),
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                    const SizedBox(
+                      width: 10,
+                    ),
+                    const VerticalDivider(
+                      indent: 10,
+                      endIndent: 10,
+                      thickness: 1,
+                      color: ColorResources.cardShadowColor,
+                    ),
+                    const SizedBox(
+                      width: 10,
+                    ),
+                    Expanded(
+                      child: TextField(
+                        keyboardType: TextInputType.number,
                         style: GoogleFonts.poppins(
-                          fontSize: Dimensions.fontSizeSmall,
-                          color: const Color(0xFF929292),
-                          fontWeight: FontWeight.w500,
-                        ),
+                            fontSize: Dimensions.fontSizeSmall),
+                        decoration: InputDecoration(
+                            hintStyle: GoogleFonts.poppins(
+                                fontSize: Dimensions.fontSizeDefault,
+                                color: ColorResources.cardShadowColor),
+                            border: InputBorder.none,
+                            hintText: 'XXXX-XXX-XXXX'),
                       ),
-                      const SizedBox(
-                        width: 10,
-                      ),
-                      const VerticalDivider(
-                        indent: 10,
-                        endIndent: 10,
-                        thickness: 1,
-                        color: ColorResources.cardShadowColor,
-                      ),
-                      const SizedBox(
-                        width: 10,
-                      ),
-                      Expanded(
-                        child: TextField(
-                          keyboardType: TextInputType.number,
-                          style: GoogleFonts.poppins(fontSize: Dimensions.fontSizeSmall),
-                          decoration: InputDecoration(hintStyle: GoogleFonts.poppins(fontSize: Dimensions.fontSizeSmall, color: ColorResources.cardShadowColor), border: InputBorder.none, hintText: 'XXXX-XXX-XXXX'),
-                        ),
-                      ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
               ),
             ),
@@ -78,7 +92,8 @@ class OtpScreen extends StatelessWidget {
             ),
             CustomButton(
               onTap: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => opt()));
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => opt()));
               },
               btnTxt: "GET OTP",
             ),
@@ -87,7 +102,10 @@ class OtpScreen extends StatelessWidget {
             ),
             Text(
               'Or continue with',
-              style: GoogleFonts.poppins(fontSize: Dimensions.fontSizeExtraSmall, textStyle: GoogleFonts.poppins(color: ColorResources.txcolour)),
+              style: GoogleFonts.poppins(
+                  fontSize: Dimensions.fontSizeSmall,
+                  textStyle:
+                      GoogleFonts.poppins(color: ColorResources.txcolour)),
             ),
             SizedBox(
               height: 15,
@@ -95,7 +113,10 @@ class OtpScreen extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                SizedBox(height: 25, width: 25, child: Image.asset('assets/google_PNG19635.png')),
+                SizedBox(
+                    height: 25,
+                    width: 25,
+                    child: Image.asset('assets/google_PNG19635.png')),
                 const SizedBox(
                   width: 2,
                 ),

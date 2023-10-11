@@ -136,11 +136,14 @@ class stream_Selection extends StatelessWidget {
       ),
       floatingActionButton: Row(
         children: [
-          SizedBox(
+          const SizedBox(
             width: 30,
           ),
           InkWell(
-            onTap: () {},
+            onTap: () {
+              // Navigator.push(context,
+              //     MaterialPageRoute(builder: (context) => Collegeselecting()));
+            },
             child: Container(
               decoration: BoxDecoration(
                   color: ColorResources.btcolour,
@@ -150,10 +153,25 @@ class stream_Selection extends StatelessWidget {
               height: 54,
               width: 210,
               child: Center(
-                child: Text(
-                  'Search',
-                  style: TextStyle(
-                      fontSize: Dimensions.fontSizeSmall, color: Colors.white),
+                child: Row(
+                  children: [
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Icon(
+                      Icons.search_outlined,
+                      color: Colors.white,
+                    ),
+                    SizedBox(
+                      width: 15,
+                    ),
+                    Text(
+                      'Search',
+                      style: TextStyle(
+                          fontSize: Dimensions.fontSizeDefault,
+                          color: Colors.white),
+                    ),
+                  ],
                 ),
               ),
             ),
@@ -173,14 +191,29 @@ class stream_Selection extends StatelessWidget {
               height: 54,
               width: 150,
               child: Center(
-                child: Text(
-                  'Call us',
-                  style: TextStyle(
-                      fontSize: Dimensions.fontSizeSmall, color: Colors.white),
+                child: Row(
+                  children: [
+                    SizedBox(
+                      width: 15,
+                    ),
+                    Icon(
+                      Icons.call_outlined,
+                      color: Colors.white,
+                    ),
+                    SizedBox(
+                      width: 15,
+                    ),
+                    Text(
+                      'Call us',
+                      style: TextStyle(
+                          fontSize: Dimensions.fontSizeDefault,
+                          color: Colors.white),
+                    ),
+                  ],
                 ),
               ),
             ),
-          )
+          ),
         ],
       ),
     );

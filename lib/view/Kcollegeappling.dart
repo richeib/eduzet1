@@ -23,41 +23,6 @@ class _CollegeApplingState extends State<CollegeAppling> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      // bottomNavigationBar: Container(
-      //   margin: EdgeInsets.all(5),
-      //   height: 60,
-      //   width: double.infinity,
-      //   decoration: BoxDecoration(
-      //       borderRadius: BorderRadius.circular(50),
-      //       color: ColorResources.btcolour),
-      //   child: GNav(
-      //       color: Colors.transparent,
-      //       activeColor: Colors.white,
-      //       tabBackgroundColor: Color.fromARGB(80, 4, 50, 158),
-      //       curve: Curves.easeOutExpo,
-      //       padding: EdgeInsets.symmetric(horizontal: 30, vertical: 10),
-      //       gap: 5,
-      //       tabs: [
-      //         GButton(
-      //           icon: Icons.monitor,
-      //           iconColor: Colors.white,
-      //           text: 'Home',
-      //         ),
-      //         GButton(
-      //             icon: Icons.work_sharp,
-      //             iconColor: Colors.white,
-      //             text: 'Apply Now',
-      //             onPressed: () {
-      //               Navigator.push(context,
-      //                   MaterialPageRoute(builder: (context) => CollegePage()));
-      //             }),
-      //         GButton(
-      //           icon: Icons.call,
-      //           iconColor: Colors.white,
-      //           text: 'Call Us',
-      //         )
-      //       ]),
-      // ),
       appBar: AppBar(
         leading: const BackButton(
           color: Colors.black,
@@ -92,18 +57,18 @@ class _CollegeApplingState extends State<CollegeAppling> {
                 children: [
                   Container(
                     child: Text(
-                      'Attapadi College of\nArt & Science',
+                      'Hindustan College of\nArt & Science',
                       style: GoogleFonts.poppins(
-                          fontSize: Dimensions.fontSizeOverLarge,
+                          fontSize: Dimensions.fontSizeExtraLarge2,
                           color: ColorResources.txcolour,
-                          fontWeight: FontWeight.w600),
+                          fontWeight: FontWeight.w500),
                     ),
                   ),
                   Container(
                     child: Icon(
                       Icons.favorite_border,
                       size: 37,
-                      color: Colors.grey,
+                      color: Colors.black,
                     ),
                   ),
                 ],
@@ -117,7 +82,8 @@ class _CollegeApplingState extends State<CollegeAppling> {
                 SizedBox(width: 20),
                 Text(
                   'Delhi',
-                  style: TextStyle(color: Colors.grey),
+                  style: TextStyle(
+                      color: Colors.grey, fontSize: Dimensions.fontSizeDefault),
                 ),
               ],
             ),
@@ -129,11 +95,14 @@ class _CollegeApplingState extends State<CollegeAppling> {
                 SizedBox(
                   width: 20,
                 ),
-                Text('5.0'),
+                Text(
+                  '5.0',
+                  style: TextStyle(fontSize: 12),
+                ),
                 Align(
                   alignment: Alignment.topLeft,
                   child: RatingBar.builder(
-                    itemSize: 20,
+                    itemSize: 12,
                     initialRating: 3,
                     minRating: 1,
                     direction: Axis.horizontal,
@@ -207,7 +176,7 @@ class _CollegeApplingState extends State<CollegeAppling> {
                           child: Text(
                             'Safty Assured by this App',
                             style: GoogleFonts.poppins(
-                              fontSize: Dimensions.fontSizeSmall,
+                              fontSize: Dimensions.fontSizeExtraSmall,
                               color: Color(0xff848400),
                             ),
                           )),
@@ -220,10 +189,10 @@ class _CollegeApplingState extends State<CollegeAppling> {
                     ],
                   ),
                   Text(
-                    "• Accredited by National Assessment and Accreditation Council (NAAC) of UGC\n• All India Council for Technical Education (AICTE)",
+                    "• Accredited by National Assessment and Accreditation Council\n (NAAC) of UGC\n• All India Council for Technical Education (AICTE)",
                     style: const TextStyle(
                       fontFamily: "Poppins",
-                      fontSize: 11.5,
+                      fontSize: Dimensions.fontSizeSmall,
                       fontWeight: FontWeight.w500,
                       color: Color(0xff1f2b5d),
                       height: 20 / 10,
@@ -294,14 +263,14 @@ class _CollegeApplingState extends State<CollegeAppling> {
                     height: 10,
                   ),
                   Text(
-                    'Discription',
+                    'Description',
                     style: GoogleFonts.poppins(
                       fontSize: Dimensions.fontSizeLarge,
                       color: Colors.black,
                     ),
                   ),
                   const SizedBox(
-                    height: 10,
+                    height: 12,
                   ),
                   Text(
                     '• Years of Official Experience\n• Diploma in computer science\n• Worlds best Teachers',
@@ -311,7 +280,7 @@ class _CollegeApplingState extends State<CollegeAppling> {
                     ),
                   ),
                   const SizedBox(
-                    height: 10,
+                    height: 12,
                   ),
                   Container(
                     decoration: BoxDecoration(
@@ -494,6 +463,7 @@ class _CollegeApplingState extends State<CollegeAppling> {
           ],
         ),
       ),
+
       floatingActionButton: Row(
         children: [
           const SizedBox(
@@ -511,7 +481,7 @@ class _CollegeApplingState extends State<CollegeAppling> {
                       topLeft: Radius.circular(25),
                       bottomLeft: Radius.circular(25))),
               height: 54,
-              width: 120,
+              width: 115,
               child: Center(
                   child: Icon(
                 Icons.home_max,
@@ -526,7 +496,7 @@ class _CollegeApplingState extends State<CollegeAppling> {
             },
             child: Container(
                 height: 54,
-                width: 140,
+                width: 130,
                 color: ColorResources.btcolour,
                 child: Center(
                   child: Container(
@@ -561,7 +531,7 @@ class _CollegeApplingState extends State<CollegeAppling> {
                       topRight: Radius.circular(25),
                       bottomRight: Radius.circular(25))),
               height: 54,
-              width: 120,
+              width: 115,
               child: Center(
                   child: Icon(
                 Icons.call,

@@ -14,7 +14,7 @@ class Profile extends StatelessWidget {
     return Scaffold(
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.only(left: 40, right: 40, top: 25),
+          padding: EdgeInsets.only(left: 35, right: 35, top: 35),
           child: Column(
             children: [
               Text(
@@ -116,7 +116,7 @@ class Profile extends StatelessWidget {
                             fontWeight: FontWeight.w600),
                       ),
                       SizedBox(
-                        width: 75,
+                        width: 70,
                       ),
                       Text(
                         'Date of birth',
@@ -133,7 +133,7 @@ class Profile extends StatelessWidget {
                     children: [
                       Container(
                         height: 39,
-                        width: 158,
+                        width: 153,
                         child: TextFormField(
                           decoration: InputDecoration(
                             filled: true,
@@ -157,7 +157,7 @@ class Profile extends StatelessWidget {
                       ),
                       Container(
                         height: 39,
-                        width: 158,
+                        width: 153,
                         child: TextFormField(
                           decoration: InputDecoration(
                             filled: true,
@@ -553,7 +553,9 @@ class Profile extends StatelessWidget {
                   },
                   child: Text(
                     'Get free consultation',
-                    style: TextStyle(color: Colors.blue[900]),
+                    style: TextStyle(
+                        color: Colors.blue[900],
+                        fontSize: Dimensions.fontSizeDefault),
                   ))
             ],
           ),
