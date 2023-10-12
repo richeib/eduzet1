@@ -31,13 +31,15 @@ class _Profile2State extends State<Profile2> {
           Text(
             'Samanta Ashok',
             style: GoogleFonts.poppins(
-              fontSize: Dimensions.fontSizeExtraLarge,
+              fontSize: Dimensions.fontSizeLarge,
+              fontWeight: FontWeight.w500,
               color: Colors.black,
             ),
           ),
           Text(
             'Post Graduation',
-            style: GoogleFonts.poppins(color: Colors.grey, fontSize: Dimensions.fontSizeSmall),
+            style: GoogleFonts.poppins(
+                color: Colors.grey, fontSize: Dimensions.fontSizeExtraSmall),
           ),
           const Divider(
             color: Color(0xFF939393),
@@ -62,12 +64,16 @@ class _Profile2State extends State<Profile2> {
                       ),
                       Text(
                         'Change Name',
-                        style: GoogleFonts.poppins(color: Colors.grey, fontSize: Dimensions.fontSizeSmall),
+                        style: GoogleFonts.poppins(
+                            color: Colors.grey,
+                            fontSize: Dimensions.fontSizeDefault),
                       ),
                       GestureDetector(
                         child: Icon(
                           color: Colors.grey,
-                          expanded ? Icons.arrow_upward_rounded : Icons.arrow_downward_rounded,
+                          expanded
+                              ? Icons.arrow_upward_rounded
+                              : Icons.arrow_downward_rounded,
                         ),
                         onTap: () {
                           setState(() {
@@ -93,10 +99,13 @@ class _Profile2State extends State<Profile2> {
                               child: TextField(
                                 textAlign: TextAlign.center,
                                 decoration: InputDecoration(
-                                  hintStyle: GoogleFonts.poppins(color: Colors.grey),
+                                  hintStyle:
+                                      GoogleFonts.poppins(color: Colors.grey),
                                   hintText: 'samantha ashok',
                                 ),
-                                style: GoogleFonts.poppins(color: Colors.grey, fontSize: Dimensions.fontSizeSmall),
+                                style: GoogleFonts.poppins(
+                                    color: Colors.grey,
+                                    fontSize: Dimensions.fontSizeDefault),
                               ),
                             ),
                             GestureDetector(
@@ -136,10 +145,14 @@ class _Profile2State extends State<Profile2> {
                       ),
                       Text(
                         'Add New Phone',
-                        style: GoogleFonts.poppins(color: Colors.grey, fontSize: Dimensions.fontSizeSmall),
+                        style: GoogleFonts.poppins(
+                            color: Colors.grey,
+                            fontSize: Dimensions.fontSizeDefault),
                       ),
                       Icon(
-                        expanded ? Icons.arrow_upward_rounded : Icons.arrow_downward_rounded,
+                        expanded
+                            ? Icons.arrow_upward_rounded
+                            : Icons.arrow_downward_rounded,
                         color: Colors.grey,
                       ),
                     ],
@@ -157,10 +170,13 @@ class _Profile2State extends State<Profile2> {
                               child: TextField(
                                 textAlign: TextAlign.center,
                                 decoration: InputDecoration(
-                                  hintStyle: GoogleFonts.poppins(color: Colors.grey),
+                                  hintStyle:
+                                      GoogleFonts.poppins(color: Colors.grey),
                                   hintText: 'samantha ashok',
                                 ),
-                                style: GoogleFonts.poppins(color: Colors.grey, fontSize: Dimensions.fontSizeSmall),
+                                style: GoogleFonts.poppins(
+                                    color: Colors.grey,
+                                    fontSize: Dimensions.fontSizeDefault),
                               ),
                             ),
                             GestureDetector(
@@ -198,7 +214,9 @@ class _Profile2State extends State<Profile2> {
                   ),
                   Text(
                     'History',
-                    style: GoogleFonts.poppins(color: Colors.grey, fontSize: Dimensions.fontSizeSmall),
+                    style: GoogleFonts.poppins(
+                        color: Colors.grey,
+                        fontSize: Dimensions.fontSizeDefault),
                   ),
                   Icon(
                     Icons.arrow_downward_rounded,
@@ -229,7 +247,9 @@ class _Profile2State extends State<Profile2> {
                   ),
                   Text(
                     'Talk to our students',
-                    style: GoogleFonts.poppins(color: Colors.grey, fontSize: Dimensions.fontSizeSmall),
+                    style: GoogleFonts.poppins(
+                        color: Colors.grey,
+                        fontSize: Dimensions.fontSizeDefault),
                   ),
                   Icon(
                     Icons.arrow_downward_rounded,
@@ -260,7 +280,9 @@ class _Profile2State extends State<Profile2> {
                   ),
                   Text(
                     'Logout',
-                    style: GoogleFonts.poppins(color: Colors.grey, fontSize: Dimensions.fontSizeSmall),
+                    style: GoogleFonts.poppins(
+                        color: Colors.grey,
+                        fontSize: Dimensions.fontSizeDefault),
                   ),
                   Icon(
                     Icons.arrow_downward_rounded,

@@ -48,7 +48,7 @@ class DefaultHome extends StatelessWidget {
                           width: 150,
                         ),
                         SizedBox(
-                          width: 115,
+                          width: 120,
                         ),
                         Column(
                           children: [
@@ -56,7 +56,7 @@ class DefaultHome extends StatelessWidget {
                             Text(
                               'Banglore',
                               style: TextStyle(
-                                  fontSize: 8,
+                                  fontSize: 6,
                                   fontWeight: FontWeight.w400,
                                   color: ColorResources.txcolour),
                             )
@@ -121,7 +121,7 @@ class DefaultHome extends StatelessWidget {
                               Text(
                                 'B.Tech',
                                 style: GoogleFonts.poppins(
-                                    fontSize: Dimensions.fontSizeOverLarge,
+                                    fontSize: 28,
                                     fontWeight: FontWeight.w600,
                                     color: Colors.white),
                               ),
@@ -131,7 +131,7 @@ class DefaultHome extends StatelessWidget {
                               Text(
                                 '4 years duration',
                                 style: GoogleFonts.poppins(
-                                    fontSize: Dimensions.fontSizeSmall,
+                                    fontSize: Dimensions.fontSizeDefault,
                                     color: Colors.white),
                               )
                             ],
@@ -143,18 +143,25 @@ class DefaultHome extends StatelessWidget {
                     const SizedBox(
                       height: 10,
                     ),
-                    Text(
-                      'Continue searching',
-                      style: GoogleFonts.poppins(
-                          color: Colors.black,
-                          fontSize: Dimensions.fontSizeLarge,
-                          fontWeight: FontWeight.w500),
+                    Row(
+                      children: [
+                        SizedBox(
+                          width: 20,
+                        ),
+                        Text(
+                          'Continue searching',
+                          style: GoogleFonts.poppins(
+                              color: Colors.black,
+                              fontSize: Dimensions.fontSizeDefault,
+                              fontWeight: FontWeight.w500),
+                        ),
+                      ],
                     ),
                     const SizedBox(
                       height: 10,
                     ),
                     Container(
-                      height: 110,
+                      height: 100,
                       child: ListView.builder(
                         scrollDirection: Axis.horizontal,
                         itemCount: 4,
@@ -178,8 +185,7 @@ class DefaultHome extends StatelessWidget {
                                       Text(
                                         "Bangalore",
                                         style: GoogleFonts.poppins(
-                                          fontSize:
-                                              Dimensions.fontSizeExtraLarge,
+                                          fontSize: Dimensions.fontSizeDefault,
                                           fontWeight: FontWeight.w500,
                                           color: Colors.white,
                                           height: 21 / 14,
@@ -189,7 +195,8 @@ class DefaultHome extends StatelessWidget {
                                       Text(
                                         "Medical - MBBS",
                                         style: GoogleFonts.poppins(
-                                          fontSize: Dimensions.fontSizeSmall,
+                                          fontSize:
+                                              Dimensions.fontSizeExtraSmall,
                                           fontWeight: FontWeight.w400,
                                           color: Colors.white,
                                           height: 15 / 10,
@@ -335,8 +342,8 @@ class DefaultHome extends StatelessWidget {
                                             Text(
                                               'HICET',
                                               style: GoogleFonts.poppins(
-                                                fontSize:
-                                                    Dimensions.fontSizeLarge,
+                                                fontSize: Dimensions
+                                                    .fontSizeExtraLarge,
                                                 fontWeight: FontWeight.w600,
                                                 color: ColorResources.txcolour,
                                               ),

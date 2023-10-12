@@ -159,15 +159,17 @@ class _CollegePageState extends State<CollegePage> {
                       },
                       child: Container(
                         width: double.infinity,
+                        padding: const EdgeInsets.symmetric(
+                            vertical: 10, horizontal: 10),
                         decoration: BoxDecoration(
                             color: const Color(0xFF1f2b5d),
                             borderRadius: BorderRadius.circular(10)),
                         child: Column(
                           children: [
                             Text(
-                              "• Accredited by National Assessment and Accreditation\n Council (NAAC) of UGC \n• All India Council for Technical Education (AICTE)",
+                              "• Accredited by National Assessment and Accreditation Council (NAAC) of UGC \n• All India Council for Technical Education (AICTE)",
                               style: GoogleFonts.poppins(
-                                fontSize: Dimensions.fontSizeExtraSmall,
+                                fontSize: Dimensions.fontSizeSmall,
                                 fontWeight: FontWeight.w400,
                                 color: Colors.white,
                               ),
@@ -195,8 +197,9 @@ class _CollegePageState extends State<CollegePage> {
                           Text(
                             'Curriculum',
                             style: GoogleFonts.poppins(
-                              fontSize: Dimensions.fontSizeLarge,
+                              fontSize: Dimensions.fontSizeDefault,
                               color: ColorResources.txcolour,
+                              fontWeight: FontWeight.w500,
                             ),
                           ),
                           SizedBox(
@@ -224,7 +227,8 @@ class _CollegePageState extends State<CollegePage> {
                           Text(
                             'Other Course',
                             style: GoogleFonts.poppins(
-                              fontSize: Dimensions.fontSizeLarge,
+                              fontSize: Dimensions.fontSizeDefault,
+                              fontWeight: FontWeight.w500,
                               color: ColorResources.txcolour,
                             ),
                           ),
@@ -251,7 +255,7 @@ class _CollegePageState extends State<CollegePage> {
                                 'Rating and Response',
                                 style: GoogleFonts.poppins(
                                     fontSize: Dimensions.fontSizeLarge,
-                                    fontWeight: FontWeight.w600),
+                                    fontWeight: FontWeight.w500),
                               ),
                               InkWell(
                                 onTap: () {
@@ -290,8 +294,9 @@ class _CollegePageState extends State<CollegePage> {
                                       Text(
                                         'Newton',
                                         style: GoogleFonts.poppins(
-                                          fontSize: Dimensions.fontSizeSmall,
-                                          color: ColorResources.txcolour,
+                                          fontSize: Dimensions.fontSizeLarge,
+                                          color: Colors.black,
+                                          fontWeight: FontWeight.w500,
                                         ),
                                       ),
                                     ],

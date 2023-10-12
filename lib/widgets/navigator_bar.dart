@@ -28,6 +28,7 @@ class DashboardScreenState extends State<DashboardScreen> {
   Widget build(BuildContext context) {
     double displayWidth = MediaQuery.of(context).size.width;
     return Scaffold(
+      
       bottomNavigationBar: Container(
         margin: EdgeInsets.all(displayWidth * .05),
         height: displayWidth * .155,
