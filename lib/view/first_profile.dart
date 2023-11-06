@@ -19,19 +19,15 @@ class Profile extends StatelessWidget {
             children: [
               Text(
                 'Complete your profile',
-                style: GoogleFonts.poppins(
-                    fontSize: Dimensions.fontSizeDefault,
-                    fontWeight: FontWeight.w600),
+                style: GoogleFonts.poppins(fontSize: Dimensions.fontSizeDefault, fontWeight: FontWeight.w600),
               ),
               Text(
                 'Add your details',
-                style: GoogleFonts.poppins(
-                    fontSize: Dimensions.fontSizeDefault, color: Colors.grey),
+                style: GoogleFonts.poppins(fontSize: Dimensions.fontSizeDefault, color: Colors.grey),
                 textAlign: TextAlign.start,
               ),
               Container(
-                margin:
-                    const EdgeInsets.symmetric(horizontal: 40, vertical: 20),
+                margin: const EdgeInsets.symmetric(horizontal: 40, vertical: 20),
                 child: Column(
                   children: [
                     imageProfile(),
@@ -41,11 +37,9 @@ class Profile extends StatelessWidget {
               Container(
                   padding: const EdgeInsets.only(left: 20),
                   width: 400,
-                  child: const Text(
+                  child: Text(
                     'Name',
-                    style: TextStyle(
-                        fontSize: Dimensions.fontSizeSmall,
-                        fontWeight: FontWeight.w600),
+                    style: TextStyle(fontSize: Dimensions.fontSizeSmall, fontWeight: FontWeight.w600),
                   )),
               SizedBox(
                 height: 5,
@@ -57,9 +51,7 @@ class Profile extends StatelessWidget {
                   decoration: InputDecoration(
                     filled: true,
                     fillColor: const Color.fromARGB(255, 235, 235, 235),
-                    border: const OutlineInputBorder(
-                        borderSide: BorderSide.none,
-                        borderRadius: BorderRadius.all(Radius.circular(13))),
+                    border: const OutlineInputBorder(borderSide: BorderSide.none, borderRadius: BorderRadius.all(Radius.circular(13))),
                   ),
                 ),
               ),
@@ -69,11 +61,9 @@ class Profile extends StatelessWidget {
               Container(
                 padding: const EdgeInsets.only(left: 20),
                 width: 400,
-                child: const Text(
+                child: Text(
                   'E-mail',
-                  style: TextStyle(
-                      fontSize: Dimensions.fontSizeSmall,
-                      fontWeight: FontWeight.w600),
+                  style: TextStyle(fontSize: Dimensions.fontSizeSmall, fontWeight: FontWeight.w600),
                 ),
               ),
               SizedBox(
@@ -92,9 +82,7 @@ class Profile extends StatelessWidget {
                       color: Colors.grey,
                       fontSize: Dimensions.fontSizeSmall,
                     ),
-                    border: const OutlineInputBorder(
-                        borderSide: BorderSide.none,
-                        borderRadius: BorderRadius.all(Radius.circular(13))),
+                    border: const OutlineInputBorder(borderSide: BorderSide.none, borderRadius: BorderRadius.all(Radius.circular(13))),
                   ),
                 ),
               ),
@@ -111,18 +99,14 @@ class Profile extends StatelessWidget {
                       ),
                       Text(
                         'Phone number',
-                        style: TextStyle(
-                            fontSize: Dimensions.fontSizeSmall,
-                            fontWeight: FontWeight.w600),
+                        style: TextStyle(fontSize: Dimensions.fontSizeSmall, fontWeight: FontWeight.w600),
                       ),
                       SizedBox(
                         width: 70,
                       ),
                       Text(
                         'Date of birth',
-                        style: TextStyle(
-                            fontSize: Dimensions.fontSizeSmall,
-                            fontWeight: FontWeight.w600),
+                        style: TextStyle(fontSize: Dimensions.fontSizeSmall, fontWeight: FontWeight.w600),
                       ),
                     ],
                   )),
@@ -163,8 +147,7 @@ class Profile extends StatelessWidget {
                             DateTime? pickedDate = await showDatePicker(
                               context: context,
                               initialDate: DateTime.now(),
-                              firstDate: DateTime(
-                                  2000), //DateTime.now() - not to allow to choose before today.
+                              firstDate: DateTime(2000), //DateTime.now() - not to allow to choose before today.
                               lastDate: DateTime(2101),
                               builder: (context, child) => Theme(
                                   data: Theme.of(context).copyWith(
@@ -175,8 +158,7 @@ class Profile extends StatelessWidget {
                                   child: Column(
                                     children: <Widget>[
                                       Padding(
-                                        padding:
-                                            const EdgeInsets.only(top: 50.0),
+                                        padding: const EdgeInsets.only(top: 50.0),
                                         child: AspectRatio(
                                           aspectRatio: 5 / 7,
                                           child: child,
@@ -215,9 +197,7 @@ class Profile extends StatelessWidget {
                   width: 400,
                   child: Text(
                     'Place',
-                    style: GoogleFonts.poppins(
-                        fontSize: Dimensions.fontSizeSmall,
-                        fontWeight: FontWeight.w600),
+                    style: GoogleFonts.poppins(fontSize: Dimensions.fontSizeSmall, fontWeight: FontWeight.w600),
                   )),
               SizedBox(
                 height: 5,
@@ -234,9 +214,7 @@ class Profile extends StatelessWidget {
                       color: Colors.grey,
                       fontSize: Dimensions.fontSizeSmall,
                     ),
-                    border: const OutlineInputBorder(
-                        borderSide: BorderSide.none,
-                        borderRadius: BorderRadius.all(Radius.circular(13))),
+                    border: const OutlineInputBorder(borderSide: BorderSide.none, borderRadius: BorderRadius.all(Radius.circular(13))),
                   ),
                 ),
               ),
@@ -246,11 +224,9 @@ class Profile extends StatelessWidget {
               Container(
                 padding: const EdgeInsets.only(left: 20),
                 width: 400,
-                child: const Text(
+                child: Text(
                   'Education Qualification',
-                  style: TextStyle(
-                      fontSize: Dimensions.fontSizeSmall,
-                      fontWeight: FontWeight.w600),
+                  style: TextStyle(fontSize: Dimensions.fontSizeSmall, fontWeight: FontWeight.w600),
                 ),
               ),
               SizedBox(
@@ -321,10 +297,7 @@ class Profile extends StatelessWidget {
                   width: 400,
                   child: Text(
                     'Add more information',
-                    style: GoogleFonts.poppins(
-                        fontSize: 13,
-                        color: Colors.pink,
-                        fontWeight: FontWeight.w600),
+                    style: GoogleFonts.poppins(fontSize: 13, color: Colors.pink, fontWeight: FontWeight.w600),
                     textAlign: TextAlign.start,
                   )),
               Container(
@@ -382,9 +355,7 @@ class Profile extends StatelessWidget {
                                   ),
                                   Text(
                                     'Book an Appointment',
-                                    style: GoogleFonts.poppins(
-                                        fontSize: Dimensions.fontSizeDefault,
-                                        fontWeight: FontWeight.w400),
+                                    style: GoogleFonts.poppins(fontSize: Dimensions.fontSizeDefault, fontWeight: FontWeight.w400),
                                   ),
                                   const SizedBox(
                                     height: 10,
@@ -392,27 +363,20 @@ class Profile extends StatelessWidget {
                                   Container(
                                       padding: const EdgeInsets.only(left: 33),
                                       width: 400,
-                                      child: const Text(
+                                      child: Text(
                                         'Name',
-                                        style: TextStyle(
-                                            fontSize: Dimensions.fontSizeSmall,
-                                            fontWeight: FontWeight.w600),
+                                        style: TextStyle(fontSize: Dimensions.fontSizeSmall, fontWeight: FontWeight.w600),
                                       )),
                                   Padding(
-                                    padding: const EdgeInsets.only(
-                                        left: 25, right: 25),
+                                    padding: const EdgeInsets.only(left: 25, right: 25),
                                     child: Container(
                                       height: 45,
                                       color: Colors.white,
                                       child: TextFormField(
                                         decoration: const InputDecoration(
                                           filled: true,
-                                          fillColor: Color.fromARGB(
-                                              255, 235, 235, 235),
-                                          border: OutlineInputBorder(
-                                              borderSide: BorderSide.none,
-                                              borderRadius: BorderRadius.all(
-                                                  Radius.circular(13))),
+                                          fillColor: Color.fromARGB(255, 235, 235, 235),
+                                          border: OutlineInputBorder(borderSide: BorderSide.none, borderRadius: BorderRadius.all(Radius.circular(13))),
                                         ),
                                       ),
                                     ),
@@ -423,27 +387,20 @@ class Profile extends StatelessWidget {
                                   Container(
                                       padding: const EdgeInsets.only(left: 33),
                                       width: 400,
-                                      child: const Text(
+                                      child: Text(
                                         'Guardian / Father\'s Name',
-                                        style: TextStyle(
-                                            fontSize: Dimensions.fontSizeSmall,
-                                            fontWeight: FontWeight.w600),
+                                        style: TextStyle(fontSize: Dimensions.fontSizeSmall, fontWeight: FontWeight.w600),
                                       )),
                                   Padding(
-                                    padding: const EdgeInsets.only(
-                                        left: 25, right: 25),
+                                    padding: const EdgeInsets.only(left: 25, right: 25),
                                     child: Container(
                                       height: 45,
                                       color: Colors.white,
                                       child: TextFormField(
                                         decoration: const InputDecoration(
                                           filled: true,
-                                          fillColor: Color.fromARGB(
-                                              255, 235, 235, 235),
-                                          border: OutlineInputBorder(
-                                              borderSide: BorderSide.none,
-                                              borderRadius: BorderRadius.all(
-                                                  Radius.circular(13))),
+                                          fillColor: Color.fromARGB(255, 235, 235, 235),
+                                          border: OutlineInputBorder(borderSide: BorderSide.none, borderRadius: BorderRadius.all(Radius.circular(13))),
                                         ),
                                       ),
                                     ),
@@ -454,33 +411,22 @@ class Profile extends StatelessWidget {
                                   Container(
                                       padding: const EdgeInsets.only(left: 33),
                                       width: 400,
-                                      child: const Text(
+                                      child: Text(
                                         'Guardian number',
-                                        style: TextStyle(
-                                            fontSize: Dimensions.fontSizeSmall,
-                                            fontWeight: FontWeight.w600),
+                                        style: TextStyle(fontSize: Dimensions.fontSizeSmall, fontWeight: FontWeight.w600),
                                       )),
                                   Padding(
-                                    padding: const EdgeInsets.only(
-                                        left: 25, right: 25),
+                                    padding: const EdgeInsets.only(left: 25, right: 25),
                                     child: Container(
                                       height: 45,
                                       color: Colors.white,
                                       child: TextFormField(
                                         decoration: const InputDecoration(
                                           filled: true,
-                                          fillColor: Color.fromARGB(
-                                              255, 235, 235, 235),
+                                          fillColor: Color.fromARGB(255, 235, 235, 235),
                                           hintText: '+91 85992994659',
-                                          hintStyle: TextStyle(
-                                              color: Colors.grey,
-                                              fontSize: 13,
-                                              fontFamily:
-                                                  'GoogleFonts.poppins()'),
-                                          border: OutlineInputBorder(
-                                              borderSide: BorderSide.none,
-                                              borderRadius: BorderRadius.all(
-                                                  Radius.circular(13))),
+                                          hintStyle: TextStyle(color: Colors.grey, fontSize: 13, fontFamily: 'GoogleFonts.poppins()'),
+                                          border: OutlineInputBorder(borderSide: BorderSide.none, borderRadius: BorderRadius.all(Radius.circular(13))),
                                         ),
                                       ),
                                     ),
@@ -491,33 +437,22 @@ class Profile extends StatelessWidget {
                                   Container(
                                       padding: const EdgeInsets.only(left: 33),
                                       width: 400,
-                                      child: const Text(
+                                      child: Text(
                                         'Place',
-                                        style: TextStyle(
-                                            fontSize: Dimensions.fontSizeSmall,
-                                            fontWeight: FontWeight.w600),
+                                        style: TextStyle(fontSize: Dimensions.fontSizeSmall, fontWeight: FontWeight.w600),
                                       )),
                                   Padding(
-                                    padding: const EdgeInsets.only(
-                                        left: 25, right: 25),
+                                    padding: const EdgeInsets.only(left: 25, right: 25),
                                     child: Container(
                                       height: 45,
                                       color: Colors.white,
                                       child: TextFormField(
                                         decoration: const InputDecoration(
                                           filled: true,
-                                          fillColor: Color.fromARGB(
-                                              255, 235, 235, 235),
+                                          fillColor: Color.fromARGB(255, 235, 235, 235),
                                           hintText: '',
-                                          hintStyle: TextStyle(
-                                              color: Colors.grey,
-                                              fontSize: 13,
-                                              fontFamily:
-                                                  'GoogleFonts.poppins()'),
-                                          border: OutlineInputBorder(
-                                              borderSide: BorderSide.none,
-                                              borderRadius: BorderRadius.all(
-                                                  Radius.circular(13))),
+                                          hintStyle: TextStyle(color: Colors.grey, fontSize: 13, fontFamily: 'GoogleFonts.poppins()'),
+                                          border: OutlineInputBorder(borderSide: BorderSide.none, borderRadius: BorderRadius.all(Radius.circular(13))),
                                         ),
                                       ),
                                     ),
@@ -528,33 +463,22 @@ class Profile extends StatelessWidget {
                                   Container(
                                       padding: const EdgeInsets.only(left: 33),
                                       width: 400,
-                                      child: const Text(
+                                      child: Text(
                                         'Course',
-                                        style: TextStyle(
-                                            fontSize: Dimensions.fontSizeSmall,
-                                            fontWeight: FontWeight.w600),
+                                        style: TextStyle(fontSize: Dimensions.fontSizeSmall, fontWeight: FontWeight.w600),
                                       )),
                                   Padding(
-                                    padding: const EdgeInsets.only(
-                                        left: 25, right: 25),
+                                    padding: const EdgeInsets.only(left: 25, right: 25),
                                     child: Container(
                                       height: 45,
                                       color: Colors.white,
                                       child: TextFormField(
                                         decoration: const InputDecoration(
                                           filled: true,
-                                          fillColor: Color.fromARGB(
-                                              255, 235, 235, 235),
+                                          fillColor: Color.fromARGB(255, 235, 235, 235),
                                           hintText: 'Bcom,BA',
-                                          hintStyle: TextStyle(
-                                              color: Colors.grey,
-                                              fontSize: 13,
-                                              fontFamily:
-                                                  'GoogleFonts.poppins()'),
-                                          border: OutlineInputBorder(
-                                              borderSide: BorderSide.none,
-                                              borderRadius: BorderRadius.all(
-                                                  Radius.circular(13))),
+                                          hintStyle: TextStyle(color: Colors.grey, fontSize: 13, fontFamily: 'GoogleFonts.poppins()'),
+                                          border: OutlineInputBorder(borderSide: BorderSide.none, borderRadius: BorderRadius.all(Radius.circular(13))),
                                         ),
                                       ),
                                     ),
@@ -564,11 +488,7 @@ class Profile extends StatelessWidget {
                                   ),
                                   CustomButton(
                                     onTap: () {
-                                      Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                              builder: (context) =>
-                                                  const Programselection()));
+                                      Navigator.push(context, MaterialPageRoute(builder: (context) => const Programselection()));
                                     },
                                     btnTxt: "DONE",
                                   ),
@@ -580,9 +500,7 @@ class Profile extends StatelessWidget {
                   },
                   child: Text(
                     'Get free consultation',
-                    style: TextStyle(
-                        color: Colors.blue[900],
-                        fontSize: Dimensions.fontSizeDefault),
+                    style: TextStyle(color: Colors.blue[900], fontSize: Dimensions.fontSizeDefault),
                   ))
             ],
           ),
@@ -596,8 +514,7 @@ Widget imageProfile() {
   return Center(
     child: Stack(
       children: <Widget>[
-        const CircleAvatar(
-            radius: 60.0, backgroundImage: AssetImage('assets/user 1.png')),
+        const CircleAvatar(radius: 60.0, backgroundImage: AssetImage('assets/user 1.png')),
         Positioned(
           top: 0,
           right: 0,

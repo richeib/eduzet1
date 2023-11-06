@@ -1,3 +1,4 @@
+import 'package:eduzet/utill/dimensions.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -11,21 +12,23 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+  @override
   void initState() {
     super.initState();
     _navigatetohome();
   }
 
   _navigatetohome() async {
-    await Future.delayed(Duration(seconds: 3), () {});
-    Navigator.of(context).pushReplacementNamed('indtroduction');
+    Future.delayed(const Duration(seconds: 3), () {
+      Navigator.of(context).pushReplacementNamed('indtroduction');
+    });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Container(
+      body: SizedBox(
         height: double.infinity,
         width: double.infinity,
         child: Stack(
@@ -38,21 +41,21 @@ class _SplashScreenState extends State<SplashScreen> {
             ),
             Align(
               alignment: AlignmentDirectional.bottomCenter,
-              child: Container(
+              child: SizedBox(
                 width: 200,
                 height: 100,
                 child: Column(
                   children: [
                     Text('Powered by',
                         style: GoogleFonts.poppins(
-                          fontSize: 15,
-                          fontWeight: FontWeight.bold,
+                          fontSize: Dimensions.fontSizeDefault,
+                          fontWeight: FontWeight.w500,
                         )),
                     Text(
                       'Algobiz LLP',
                       style: GoogleFonts.poppins(
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
+                        fontSize: Dimensions.fontSizeExtraLarge,
+                        fontWeight: FontWeight.w600,
                       ),
                     )
                   ],
@@ -64,26 +67,4 @@ class _SplashScreenState extends State<SplashScreen> {
       ),
     );
   }
-}
-
-class SizeTransition5 extends PageRouteBuilder {
-  final Widget page;
-
-  SizeTransition5(this.page)
-      : super(
-          pageBuilder: (context, animation, anotherAnimation) => page,
-          transitionDuration: Duration(milliseconds: 1000),
-          reverseTransitionDuration: Duration(milliseconds: 200),
-          transitionsBuilder: (context, animation, anotherAnimation, child) {
-            animation = CurvedAnimation(curve: Curves.fastLinearToSlowEaseIn, parent: animation, reverseCurve: Curves.fastOutSlowIn);
-            return Align(
-              alignment: Alignment.bottomCenter,
-              child: SizeTransition(
-                sizeFactor: animation,
-                child: page,
-                axisAlignment: 0,
-              ),
-            );
-          },
-        );
 }

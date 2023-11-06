@@ -80,7 +80,7 @@ class _CollegeselectingState extends State<Collegeselecting> {
             height: 25,
           ),
           Row(
-            children: const [
+            children:  [
               SizedBox(
                 width: 17,
               ),

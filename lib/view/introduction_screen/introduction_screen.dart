@@ -6,9 +6,10 @@ import 'package:eduzet/widgets/colour.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:introduction_screen/introduction_screen.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 
 class IndroductionScreen extends StatefulWidget {
-  IndroductionScreen({super.key});
+  const IndroductionScreen({super.key});
 
   @override
   State<IndroductionScreen> createState() => _IndroductionScreenState();
@@ -22,13 +23,16 @@ class _IndroductionScreenState extends State<IndroductionScreen> {
     return Scaffold(
       body: Stack(
         children: [
+          // rounded circle
           Positioned(
             child: Container(
-              margin: const EdgeInsets.only(top: 70),
+              margin: EdgeInsets.only(top: 5.h),
               alignment: Alignment.topCenter,
-              child: const Image(
-                width: 300,
-                image: AssetImage('assets/round.png'),
+              child: const AspectRatio(
+                aspectRatio: 4 / 3,
+                child: Image(
+                  image: AssetImage('assets/round.png'),
+                ),
               ),
             ),
           ),
@@ -90,7 +94,7 @@ class _IndroductionScreenState extends State<IndroductionScreen> {
                               "WE PROVIDE YOU",
                               style: GoogleFonts.poppins(
                                 color: const Color(0xFF3F489E),
-                                fontSize: 22,
+                                fontSize: Dimensions.fontSizeExtraLarge,
                                 fontWeight: FontWeight.w600,
                                 height: 0.66,
                               ),
@@ -98,7 +102,7 @@ class _IndroductionScreenState extends State<IndroductionScreen> {
                           );
                         }),
                     const SizedBox(
-                      height: 30,
+                      height: 35,
                     ),
                     TweenAnimationBuilder<double>(
                         curve: Curves.bounceOut,
@@ -174,7 +178,7 @@ class _IndroductionScreenState extends State<IndroductionScreen> {
               ),
               Container(
                 margin: const EdgeInsets.symmetric(horizontal: 30, vertical: 50),
-                decoration: BoxDecoration(),
+                decoration: const BoxDecoration(),
                 child: Column(
                   children: [
                     const Image(
@@ -214,7 +218,7 @@ class _IndroductionScreenState extends State<IndroductionScreen> {
                         "The best colleges in south India we provide you real time job update from any where ",
                         textAlign: TextAlign.center,
                         style: GoogleFonts.poppins(
-                          color: Color(0xFF929292),
+                          color: const Color(0xFF929292),
                           fontSize: 12,
                           fontWeight: FontWeight.w400,
                           height: 1.21,
@@ -226,39 +230,39 @@ class _IndroductionScreenState extends State<IndroductionScreen> {
               ),
               Container(
                 margin: const EdgeInsets.symmetric(horizontal: 30, vertical: 50),
-                decoration: BoxDecoration(),
+                decoration: const BoxDecoration(),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Image(
+                    const Image(
                       width: 300,
                       image: AssetImage('assets/phone.png'),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 125,
                     ),
                     Text(
                       "FIND YOUR DREAM",
                       style: GoogleFonts.poppins(
-                        color: Color(0xFF3F489E),
+                        color: const Color(0xFF3F489E),
                         fontSize: 22,
                         fontWeight: FontWeight.w600,
                         height: 0.66,
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
                     Text(
                       "COLLEGE IN A TAP",
                       style: GoogleFonts.poppins(
-                        color: Color(0xFF3F489E),
+                        color: const Color(0xFF3F489E),
                         fontSize: 32,
                         fontWeight: FontWeight.w700,
                         height: 0.45,
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 30,
                     ),
                     Container(
@@ -267,7 +271,7 @@ class _IndroductionScreenState extends State<IndroductionScreen> {
                         "The best colleges in south India we provide you real time job update from any where ",
                         textAlign: TextAlign.center,
                         style: GoogleFonts.poppins(
-                          color: Color(0xFF929292),
+                          color: const Color(0xFF929292),
                           fontSize: 12,
                           fontWeight: FontWeight.w400,
                           height: 1.21,
