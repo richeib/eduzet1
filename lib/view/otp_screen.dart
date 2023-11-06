@@ -2,6 +2,7 @@ import 'package:eduzet/utill/dimensions.dart';
 import 'package:eduzet/view/otp_send_screen.dart';
 import 'package:eduzet/widgets/colour.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:lottie/lottie.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -22,9 +23,12 @@ class OtpScreen extends StatelessWidget {
               height: 28,
             ),
             SizedBox(
-                height: 120,
-                width: 150,
-                child: Image.asset('assets/Eduzet_Logo.png')),
+              height: 120,
+              width: 150,
+              child: Image.asset(
+                'assets/Eduzet_Logo.png',
+              ),
+            ),
             Lottie.asset('animation/animation_lkj9vinn.json',
                 width: 150 * ffem, height: 150 * ffem),
             const SizedBox(
@@ -72,9 +76,15 @@ class OtpScreen extends StatelessWidget {
                     ),
                     Expanded(
                       child: TextField(
+                        inputFormatters: [
+                          LengthLimitingTextInputFormatter(
+                            10,
+                          ),
+                          //n is maximum number of characters you want in textfield
+                        ],
                         keyboardType: TextInputType.number,
                         style: GoogleFonts.poppins(
-                            fontSize: Dimensions.fontSizeSmall),
+                            fontSize: Dimensions.fontSizeLarge),
                         decoration: InputDecoration(
                             hintStyle: GoogleFonts.poppins(
                                 fontSize: Dimensions.fontSizeDefault,

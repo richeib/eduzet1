@@ -38,14 +38,12 @@ dependencies:
   lottie: ^2.3.2
   google_fonts: ^4.0.4
   pinput: ^2.3.0
- 
   image_picker: ^1.0.1
   sizer: ^2.0.15
   google_nav_bar: ^5.0.6
   flutter_rating_bar: ^4.0.1
   introduction_screen: ^3.1.8
   animated_text_kit: ^4.2.2
-  
   shimmer: ^3.0.0
   neopop: ^1.0.2
   
@@ -91,10 +89,10 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Fuggles
-  #     fonts:
-  #       - asset: fonts/Fuggles-Regular.ttf
+  fonts:
+    - family: IconsData
+      fonts:
+        - asset: assets\fonts\IconsData.ttf
         # - asset: fonts/Schyler-Italic.ttf
         #   style: italic
     # - family: Trajan Pro

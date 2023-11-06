@@ -159,6 +159,33 @@ class Profile extends StatelessWidget {
                         height: 39,
                         width: 153,
                         child: TextFormField(
+                          onTap: () async {
+                            DateTime? pickedDate = await showDatePicker(
+                              context: context,
+                              initialDate: DateTime.now(),
+                              firstDate: DateTime(
+                                  2000), //DateTime.now() - not to allow to choose before today.
+                              lastDate: DateTime(2101),
+                              builder: (context, child) => Theme(
+                                  data: Theme.of(context).copyWith(
+                                    colorScheme: ColorScheme.light(
+                                      primary: ColorResources.btcolour,
+                                    ),
+                                  ),
+                                  child: Column(
+                                    children: <Widget>[
+                                      Padding(
+                                        padding:
+                                            const EdgeInsets.only(top: 50.0),
+                                        child: AspectRatio(
+                                          aspectRatio: 5 / 7,
+                                          child: child,
+                                        ),
+                                      ),
+                                    ],
+                                  )),
+                            );
+                          },
                           decoration: InputDecoration(
                             filled: true,
                             fillColor: const Color.fromARGB(255, 235, 235, 235),

@@ -5,6 +5,7 @@ import 'package:eduzet/widgets/colour.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+
 class CourseSelection extends StatefulWidget {
   const CourseSelection({super.key});
 
@@ -13,6 +14,7 @@ class CourseSelection extends StatefulWidget {
 }
 
 class _CourseSelectionState extends State<CourseSelection> {
+  bool _isFavorited = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -136,7 +138,22 @@ class _CourseSelectionState extends State<CourseSelection> {
                               //   size: 35,
                               //   color: Colors.grey,
                               // ),
-                              Image.asset('assets/Like.png')
+                              // Image.asset('assets/Like.png')
+                              IconButton(
+                                padding: const EdgeInsets.all(0),
+                                alignment: Alignment.centerRight,
+                                icon: (_isFavorited
+                                    ? const Icon(
+                                        Icons.favorite_border_outlined,
+                                        size: 35,
+                                      )
+                                    : const Icon(
+                                        Icons.favorite,
+                                        size: 35,
+                                      )),
+                                color: Colors.grey,
+                                onPressed: _toggleFavorite,
+                              ),
                             ],
                           )
                         ],
@@ -147,6 +164,7 @@ class _CourseSelectionState extends State<CourseSelection> {
           ),
         ],
       ),
+      
       floatingActionButton: Row(
         children: [
           const SizedBox(
@@ -230,5 +248,15 @@ class _CourseSelectionState extends State<CourseSelection> {
         ],
       ),
     );
+  }
+
+  void _toggleFavorite() {
+    setState(() {
+      if (_isFavorited) {
+        _isFavorited = false;
+      } else {
+        _isFavorited = true;
+      }
+    });
   }
 }

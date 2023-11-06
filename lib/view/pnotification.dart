@@ -3,6 +3,8 @@ import 'package:eduzet/view/tprofile.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../utill/icons_data_icons.dart';
+
 class noNotification extends StatefulWidget {
   const noNotification({super.key});
 
@@ -45,7 +47,6 @@ class _noNotificationState extends State<noNotification> {
         backgroundColor: Color.fromARGB(211, 255, 255, 255),
         elevation: 0,
         actions: [
-          
           InkWell(
             onTap: () {
               Navigator.push(
@@ -104,6 +105,75 @@ class _noNotificationState extends State<noNotification> {
                     ),
                   ),
                 ),
+                // Row(
+                //   children: [
+                //     Icon(
+                //       IconsData.edit_icon,
+                //       size: 25,
+                //       color: Colors.black,
+                //     ),
+                //     Icon(
+                //       IconsData.camera_icon,
+                //       size: 25,
+                //       color: Colors.black,
+                //     ),
+                //     Icon(
+                //       IconsData.globe_icon,
+                //       size: 25,
+                //       color: Colors.black,
+                //     ),
+                //     Icon(
+                //       IconsData.history_icon,
+                //       size: 16,
+                //       color: Colors.black,
+                //     ),
+                //     Icon(
+                //       IconsData.home_icon,
+                //       size: 25,
+                //       color: Colors.black,
+                //     ),
+                //     Icon(
+                //       IconsData.like_icon,
+                //       size: 25,
+                //       color: Colors.black,
+                //     ),
+                //     Icon(
+                //       IconsData.logout_icon,
+                //       size: 25,
+                //       color: Colors.black,
+                //     ),
+                //     Icon(
+                //       IconsData.love_icon,
+                //       size: 25,
+                //       color: Colors.black,
+                //     ),
+                //     Icon(
+                //       IconsData.name_icon,
+                //       size: 25,
+                //       color: Colors.black,
+                //     ),
+                //     Icon(
+                //       IconsData.navigation_icon,
+                //       size: 25,
+                //       color: Colors.black,
+                //     ),
+                //     Icon(
+                //       IconsData.navigation_icon,
+                //       size: 25,
+                //       color: Colors.black,
+                //     ),
+                //     Icon(
+                //       IconsData.navigation_icon,
+                //       size: 25,
+                //       color: Colors.black,
+                //     ),
+                //     Icon(
+                //       IconsData.talk_icon,
+                //       size: 25,
+                //       color: Colors.black,
+                //     ),
+                //   ],
+                // )
               ],
             ),
           ),

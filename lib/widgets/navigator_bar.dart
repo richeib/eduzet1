@@ -28,8 +28,8 @@ class DashboardScreenState extends State<DashboardScreen> {
   Widget build(BuildContext context) {
     double displayWidth = MediaQuery.of(context).size.width;
     return Scaffold(
-      
-      bottomNavigationBar: Container(
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      floatingActionButton: Container(
         margin: EdgeInsets.all(displayWidth * .05),
         height: displayWidth * .155,
         decoration: BoxDecoration(

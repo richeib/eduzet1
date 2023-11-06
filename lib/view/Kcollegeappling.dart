@@ -8,6 +8,7 @@ import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:shimmer/shimmer.dart';
 
+import '../utill/icons_data_icons.dart';
 import '../widgets/colour.dart';
 import 'ohome.dart';
 
@@ -463,7 +464,7 @@ class _CollegeApplingState extends State<CollegeAppling> {
           ],
         ),
       ),
-
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: Row(
         children: [
           const SizedBox(
@@ -480,7 +481,7 @@ class _CollegeApplingState extends State<CollegeAppling> {
                   borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(25),
                       bottomLeft: Radius.circular(25))),
-              height: 54,
+              height: 50,
               width: 115,
               child: Center(
                   child: Icon(
@@ -495,13 +496,13 @@ class _CollegeApplingState extends State<CollegeAppling> {
                   MaterialPageRoute(builder: (context) => CollegePage()));
             },
             child: Container(
-                height: 54,
-                width: 130,
+                height: 50,
+                width: 115,
                 color: ColorResources.btcolour,
                 child: Center(
                   child: Container(
                     height: 40,
-                    width: 140,
+                    width: 115,
                     decoration: BoxDecoration(
                         color: Color(0xFFd45092),
                         borderRadius: BorderRadius.all(Radius.circular(20))),
@@ -509,13 +510,22 @@ class _CollegeApplingState extends State<CollegeAppling> {
                       child: Shimmer.fromColors(
                         baseColor: Colors.white,
                         highlightColor: Colors.pink,
-                        child: Text(
-                          '✔️ Apply Now',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            fontSize: Dimensions.fontSizeDefault,
-                            fontWeight: FontWeight.bold,
-                          ),
+                        child: Row(
+                          children: const [
+                            SizedBox(width: 20),
+                            Icon(
+                              IconsData.apply_icon,
+                              size: 16,
+                            ),
+                            Text(
+                              ' Apply Now',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                fontSize: Dimensions.fontSizeSmall,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
                         ),
                       ),
                     ),
@@ -530,7 +540,7 @@ class _CollegeApplingState extends State<CollegeAppling> {
                   borderRadius: BorderRadius.only(
                       topRight: Radius.circular(25),
                       bottomRight: Radius.circular(25))),
-              height: 54,
+              height: 50,
               width: 115,
               child: Center(
                   child: Icon(
