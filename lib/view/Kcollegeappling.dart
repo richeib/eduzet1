@@ -1,3 +1,4 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:eduzet/utill/dimensions.dart';
 import 'package:eduzet/view/LCollege.dart';
 import 'package:eduzet/view/tprofile.dart';
@@ -6,9 +7,9 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:shimmer/shimmer.dart';
 
-import '../utill/icons_data_icons.dart';
 import '../widgets/colour.dart';
 import 'ohome.dart';
 
@@ -20,24 +21,56 @@ class CollegeAppling extends StatefulWidget {
 }
 
 class _CollegeApplingState extends State<CollegeAppling> {
+  bool isLiked = false;
+
+  void toggleLike() {
+    print("object");
+    setState(() {
+      isLiked = !isLiked;
+    });
+  }
+
+  bool isExpanded = false;
+  bool isExpanded2 = false;
+  List<String> list = [
+    "assets/notre-dame-university-COLLEGECAMP0421-039ce0bfd40b4e429b825c6fb6ebfaa6.jpg",
+    "assets/notre-dame-university-COLLEGECAMP0421-039ce0bfd40b4e429b825c6fb6ebfaa6.jpg",
+    "assets/notre-dame-university-COLLEGECAMP0421-039ce0bfd40b4e429b825c6fb6ebfaa6.jpg",
+    "assets/notre-dame-university-COLLEGECAMP0421-039ce0bfd40b4e429b825c6fb6ebfaa6.jpg",
+    "assets/notre-dame-university-COLLEGECAMP0421-039ce0bfd40b4e429b825c6fb6ebfaa6.jpg"
+  ];
+
+  void toggleExpansion() {
+    setState(() {
+      isExpanded = !isExpanded;
+    });
+  }
+
+  void toggleExpansion2() {
+    setState(() {
+      isExpanded2 = !isExpanded2;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
+    print("object");
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
         leading: const BackButton(
           color: Colors.black,
         ),
-        backgroundColor: Color.fromARGB(211, 255, 255, 255),
+        backgroundColor: const Color.fromARGB(211, 255, 255, 255),
         elevation: 0,
         actions: [
           InkWell(
             onTap: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) => Profile2()));
+              Navigator.push(context, MaterialPageRoute(builder: (context) => const Profile2()));
             },
             child: Container(
-              margin: EdgeInsets.all(10),
-              child: CircleAvatar(
+              margin: const EdgeInsets.all(10),
+              child: const CircleAvatar(
                 radius: 15,
                 backgroundImage: AssetImage(
                   'assets/user 1.png',
@@ -51,7 +84,7 @@ class _CollegeApplingState extends State<CollegeAppling> {
         child: Column(
           children: [
             Container(
-              margin: EdgeInsets.only(right: 20, left: 20),
+              margin: const EdgeInsets.only(right: 20, left: 20),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -61,20 +94,23 @@ class _CollegeApplingState extends State<CollegeAppling> {
                       style: GoogleFonts.poppins(fontSize: Dimensions.fontSizeExtraLarge2, color: ColorResources.txcolour, fontWeight: FontWeight.w500),
                     ),
                   ),
-                  Container(
-                    child: Icon(
-                      Icons.favorite_border,
-                      size: 37,
-                      color: Colors.black,
-                    ),
-                  ),
+                  GestureDetector(
+                    onTap: toggleLike,
+                    child: isLiked
+                        ? Image.asset(width: 30, height: 30, 'assets/liked.png')
+                        : Image.asset(
+                            width: 30,
+                            height: 30,
+                            'assets/Like.png',
+                          ),
+                  )
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 8,
             ),
-            Row(
+             Row(
               children: [
                 SizedBox(width: 20),
                 Text(
@@ -83,15 +119,15 @@ class _CollegeApplingState extends State<CollegeAppling> {
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 8,
             ),
             Row(
               children: [
-                SizedBox(
+                const SizedBox(
                   width: 20,
                 ),
-                Text(
+                const Text(
                   '5.0',
                   style: TextStyle(fontSize: 12),
                 ),
@@ -104,7 +140,7 @@ class _CollegeApplingState extends State<CollegeAppling> {
                     direction: Axis.horizontal,
                     allowHalfRating: true,
                     itemCount: 5,
-                    itemBuilder: (context, _) => Icon(
+                    itemBuilder: (context, _) => const Icon(
                       Icons.star,
                       color: Colors.pink,
                     ),
@@ -115,23 +151,29 @@ class _CollegeApplingState extends State<CollegeAppling> {
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Center(
               child: Container(
-                width: MediaQuery.of(context).size.width,
-                child: Image.asset(
-                  'assets/unsplash_bgQgAKagQB4.png',
-                  fit: BoxFit.cover,
+                child: CarouselSlider(
+                  options: CarouselOptions(
+                    autoPlayInterval: const Duration(seconds: 3),
+                    autoPlay: true,
+                  ),
+                  items: list
+                      .map((item) => Container(
+                            decoration: BoxDecoration(image: DecorationImage(image: AssetImage(item))),
+                          ))
+                      .toList(),
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Container(
-              margin: EdgeInsets.symmetric(horizontal: 15),
+              margin: const EdgeInsets.symmetric(horizontal: 15),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -152,7 +194,7 @@ class _CollegeApplingState extends State<CollegeAppling> {
                       ),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   Row(
@@ -161,15 +203,15 @@ class _CollegeApplingState extends State<CollegeAppling> {
                       Container(
                           height: 25,
                           width: 180,
-                          padding: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
-                          decoration: BoxDecoration(
+                          padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+                          decoration: const BoxDecoration(
                             color: Color(0xfBDBD2E),
                           ),
                           child: Text(
                             'Safty Assured by this App',
                             style: GoogleFonts.poppins(
                               fontSize: Dimensions.fontSizeExtraSmall,
-                              color: Color(0xff848400),
+                              color: const Color(0xff848400),
                             ),
                           )),
                       Text(
@@ -178,7 +220,7 @@ class _CollegeApplingState extends State<CollegeAppling> {
                       )
                     ],
                   ),
-                  Text(
+                   Text(
                     "• Accredited by National Assessment and Accreditation Council\n (NAAC) of UGC\n• All India Council for Technical Education (AICTE)",
                     style: TextStyle(
                       fontFamily: "Poppins",
@@ -189,12 +231,12 @@ class _CollegeApplingState extends State<CollegeAppling> {
                     ),
                     textAlign: TextAlign.left,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   Container(
-                    padding: EdgeInsets.symmetric(vertical: 5, horizontal: 5),
-                    decoration: BoxDecoration(
+                    padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 5),
+                    decoration: const BoxDecoration(
                       borderRadius: BorderRadius.only(
                         bottomRight: Radius.circular(40),
                       ),
@@ -210,7 +252,7 @@ class _CollegeApplingState extends State<CollegeAppling> {
                         const SizedBox(
                           width: 5,
                         ),
-                        VerticalDivider(
+                        const VerticalDivider(
                           color: ColorResources.txcolour,
                           thickness: 2,
                           indent: 8,
@@ -257,61 +299,126 @@ class _CollegeApplingState extends State<CollegeAppling> {
                     '• Years of Official Experience\n• Diploma in computer science\n• Worlds best Teachers',
                     style: GoogleFonts.poppins(
                       fontSize: Dimensions.fontSizeSmall,
-                      color: Color(0xff606d76),
+                      color: const Color(0xff606d76),
                     ),
                   ),
                   const SizedBox(
                     height: 12,
                   ),
-                  Container(
-                    decoration: BoxDecoration(border: Border.all(color: ColorResources.txcolour, width: 1), borderRadius: BorderRadius.circular(5)),
-                    height: 43,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        Text(
-                          'Curriculum',
-                          style: GoogleFonts.poppins(
-                            fontSize: Dimensions.fontSizeLarge,
-                            color: ColorResources.txcolour,
+                  InkWell(
+                    onTap: toggleExpansion,
+                    child: Container(
+                      decoration: BoxDecoration(
+                        border: Border.all(color: ColorResources.txcolour, width: 1),
+                        borderRadius: BorderRadius.circular(5),
+                      ),
+                      height: 43,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          Text(
+                            'Curriculum',
+                            style: GoogleFonts.poppins(
+                              fontSize: Dimensions.fontSizeLarge,
+                              color: ColorResources.txcolour,
+                            ),
                           ),
-                        ),
-                        SizedBox(
-                          width: 150,
-                        ),
-                        Icon(
-                          Icons.add,
-                          color: Color(0xff1f2b5d),
-                        )
-                      ],
+                          const SizedBox(
+                            width: 150,
+                          ),
+                          Icon(
+                            isExpanded ? Icons.remove : Icons.add,
+                            color: const Color(0xff1f2b5d),
+                          )
+                        ],
+                      ),
                     ),
                   ),
+                  AnimatedContainer(
+                      curve: Curves.fastOutSlowIn,
+                      padding: const EdgeInsets.all(10),
+                      alignment: Alignment.center,
+                      margin: EdgeInsets.only(top: isExpanded ? 10 : 0),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(5),
+                        border: Border.all(color: ColorResources.txcolour, width: 1),
+                      ),
+                      duration: const Duration(milliseconds: 500),
+                      height: isExpanded ? 7.h : 0.0,
+                      width: double.maxFinite,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            "Download prospectus 2023-24",
+                            style: GoogleFonts.poppins(decoration: TextDecoration.underline, color: ColorResources.txcolour, fontSize: Dimensions.fontSizeSmall),
+                          ),
+                          isExpanded
+                              ? const Icon(
+                                  Icons.picture_as_pdf_rounded,
+                                )
+                              : const SizedBox()
+                        ],
+                      )),
                   const SizedBox(
                     height: 10,
                   ),
-                  Container(
-                    decoration: BoxDecoration(border: Border.all(color: ColorResources.txcolour, width: 1), borderRadius: BorderRadius.circular(5)),
-                    height: 43,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        Text(
-                          'Other Course',
-                          style: GoogleFonts.poppins(
-                            fontSize: Dimensions.fontSizeLarge,
-                            color: ColorResources.txcolour,
+                  InkWell(
+                    onTap: toggleExpansion2,
+                    child: Container(
+                      decoration: BoxDecoration(border: Border.all(color: ColorResources.txcolour, width: 1), borderRadius: BorderRadius.circular(5)),
+                      height: 43,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          Text(
+                            'Other Course',
+                            style: GoogleFonts.poppins(
+                              fontSize: Dimensions.fontSizeLarge,
+                              color: ColorResources.txcolour,
+                            ),
                           ),
-                        ),
-                        SizedBox(
-                          width: 150,
-                        ),
-                        Icon(
-                          Icons.add,
-                          color: Color(0xff1f2b5d),
-                        )
-                      ],
+                          const SizedBox(
+                            width: 150,
+                          ),
+                          Icon(
+                            isExpanded2 ? Icons.remove : Icons.add,
+                            color: const Color(0xff1f2b5d),
+                          )
+                        ],
+                      ),
                     ),
                   ),
+                  AnimatedContainer(
+                      curve: Curves.fastOutSlowIn,
+                      padding: const EdgeInsets.all(10),
+                      margin: EdgeInsets.only(top: isExpanded2 ? 10 : 0),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(5),
+                        border: Border.all(color: ColorResources.txcolour, width: 1),
+                      ),
+                      duration: const Duration(milliseconds: 500),
+                      height: isExpanded2 ? 10.h : 0.0,
+                      width: double.maxFinite,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "• Lorem Ipsum is simply dummy text of the printing ",
+                            style: GoogleFonts.poppins(
+                              fontSize: Dimensions.fontSizeSmall,
+                              color: ColorResources.txcolour,
+                            ),
+                          ),
+                          Text(
+                            "• ypesetting industry",
+                            style: GoogleFonts.poppins(
+                              fontSize: Dimensions.fontSizeSmall,
+                              color: ColorResources.txcolour,
+                            ),
+                          ),
+                        ],
+                      )),
                 ],
               ),
             ),
@@ -332,9 +439,9 @@ class _CollegeApplingState extends State<CollegeAppling> {
                         ),
                         InkWell(
                           onTap: () {
-                            Navigator.push(context, MaterialPageRoute(builder: (context) => Review()));
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => const Review()));
                           },
-                          child: Icon(
+                          child: const Icon(
                             Icons.arrow_right,
                             size: Dimensions.fontSizeOverLarge,
                           ),
@@ -351,7 +458,7 @@ class _CollegeApplingState extends State<CollegeAppling> {
                           children: [
                             Row(
                               children: [
-                                CircleAvatar(
+                                const CircleAvatar(
                                   radius: 20,
                                   backgroundImage: AssetImage(
                                     'assets/user 1.png',
@@ -402,7 +509,7 @@ class _CollegeApplingState extends State<CollegeAppling> {
                                 direction: Axis.horizontal,
                                 allowHalfRating: true,
                                 itemCount: 5,
-                                itemBuilder: (context, _) => Icon(
+                                itemBuilder: (context, _) => const Icon(
                                   Icons.star,
                                   color: Colors.pink,
                                 ),
@@ -413,7 +520,7 @@ class _CollegeApplingState extends State<CollegeAppling> {
                             ),
                           ],
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 10,
                         ),
                         Text(
@@ -433,7 +540,6 @@ class _CollegeApplingState extends State<CollegeAppling> {
           ],
         ),
       ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: Row(
         children: [
           const SizedBox(
@@ -441,13 +547,13 @@ class _CollegeApplingState extends State<CollegeAppling> {
           ),
           InkWell(
             onTap: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) => DefaultHome()));
+              Navigator.push(context, MaterialPageRoute(builder: (context) => const DefaultHome()));
             },
             child: Container(
-              decoration: BoxDecoration(color: ColorResources.btcolour, borderRadius: BorderRadius.only(topLeft: Radius.circular(25), bottomLeft: Radius.circular(25))),
-              height: 50,
+              decoration: const BoxDecoration(color: ColorResources.btcolour, borderRadius: BorderRadius.only(topLeft: Radius.circular(25), bottomLeft: Radius.circular(25))),
+              height: 54,
               width: 115,
-              child: Center(
+              child: const Center(
                   child: Icon(
                 Icons.home_max,
                 color: Colors.white,
@@ -456,37 +562,28 @@ class _CollegeApplingState extends State<CollegeAppling> {
           ),
           InkWell(
             onTap: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) => CollegePage()));
+              Navigator.push(context, MaterialPageRoute(builder: (context) => const CollegePage()));
             },
             child: Container(
-                height: 50,
-                width: 115,
+                height: 54,
+                width: 130,
                 color: ColorResources.btcolour,
                 child: Center(
                   child: Container(
                     height: 40,
-                    width: 115,
-                    decoration: BoxDecoration(color: Color(0xFFd45092), borderRadius: BorderRadius.all(Radius.circular(20))),
+                    width: 140,
+                    decoration: const BoxDecoration(color: Color(0xFFd45092), borderRadius: BorderRadius.all(Radius.circular(20))),
                     child: Center(
                       child: Shimmer.fromColors(
                         baseColor: Colors.white,
                         highlightColor: Colors.pink,
-                        child: Row(
-                          children: [
-                            SizedBox(width: 20),
-                            Icon(
-                              IconsData.apply_icon,
-                              size: 16,
-                            ),
-                            Text(
-                              ' Apply Now',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                fontSize: Dimensions.fontSizeSmall,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ],
+                        child:  Text(
+                          '✔️ Apply Now',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            fontSize: Dimensions.fontSizeDefault,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
                       ),
                     ),
@@ -496,10 +593,10 @@ class _CollegeApplingState extends State<CollegeAppling> {
           InkWell(
             onTap: () {},
             child: Container(
-              decoration: BoxDecoration(color: ColorResources.btcolour, borderRadius: BorderRadius.only(topRight: Radius.circular(25), bottomRight: Radius.circular(25))),
-              height: 50,
+              decoration: const BoxDecoration(color: ColorResources.btcolour, borderRadius: BorderRadius.only(topRight: Radius.circular(25), bottomRight: Radius.circular(25))),
+              height: 54,
               width: 115,
-              child: Center(
+              child: const Center(
                   child: Icon(
                 Icons.call,
                 color: Colors.white,
