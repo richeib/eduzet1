@@ -6,6 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 
+import '../utill/routes.dart';
+
 class Collegeselecting extends StatefulWidget {
   const Collegeselecting({super.key});
 
@@ -14,6 +16,16 @@ class Collegeselecting extends StatefulWidget {
 }
 
 class _CollegeselectingState extends State<Collegeselecting> {
+  List<bool> isLikedList = List.generate(20, (index) => false);
+
+  void toggleLike(int index) {
+    setState(
+      () {
+        isLikedList[index] = !isLikedList[index];
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,33 +34,24 @@ class _CollegeselectingState extends State<Collegeselecting> {
         margin: const EdgeInsets.all(5),
         height: 60,
         width: double.infinity,
-        decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(50),
-            color: ColorResources.btcolour),
-        child: const GNav(
-            color: Colors.transparent,
-            activeColor: Colors.white,
-            tabBackgroundColor: Color.fromARGB(80, 4, 50, 158),
-            curve: Curves.easeOutExpo,
-            padding: EdgeInsets.symmetric(horizontal: 40, vertical: 15),
-            gap: 5,
-            tabs: [
-              GButton(
-                icon: Icons.monitor,
-                iconColor: Colors.white,
-                text: 'Home',
-              ),
-              GButton(
-                icon: Icons.search,
-                iconColor: Colors.white,
-                text: 'Search',
-              ),
-              GButton(
-                icon: Icons.call,
-                iconColor: Colors.white,
-                text: 'Call Us',
-              )
-            ]),
+        decoration: BoxDecoration(borderRadius: BorderRadius.circular(50), color: ColorResources.btcolour),
+        child: const GNav(color: Colors.transparent, activeColor: Colors.white, tabBackgroundColor: Color.fromARGB(80, 4, 50, 158), curve: Curves.easeOutExpo, padding: EdgeInsets.symmetric(horizontal: 40, vertical: 15), gap: 5, tabs: [
+          GButton(
+            icon: Icons.monitor,
+            iconColor: Colors.white,
+            text: 'Home',
+          ),
+          GButton(
+            icon: Icons.search,
+            iconColor: Colors.white,
+            text: 'Search',
+          ),
+          GButton(
+            icon: Icons.call,
+            iconColor: Colors.white,
+            text: 'Call Us',
+          )
+        ]),
       ),
       appBar: AppBar(
         leading: const BackButton(
@@ -59,8 +62,7 @@ class _CollegeselectingState extends State<Collegeselecting> {
         actions: [
           InkWell(
             onTap: () {
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => Profile2()));
+              Navigator.push(context, MaterialPageRoute(builder: (context) => Profile2()));
             },
             child: Container(
               margin: EdgeInsets.all(10),
@@ -76,19 +78,17 @@ class _CollegeselectingState extends State<Collegeselecting> {
       ),
       body: ListView(
         children: [
-          SizedBox(
+          const SizedBox(
             height: 25,
           ),
           Row(
-            children:  [
-              SizedBox(
+            children: [
+              const SizedBox(
                 width: 17,
               ),
               Text(
                 'Select your dream',
-                style: TextStyle(
-                    fontSize: Dimensions.fontSizeExtraLarge,
-                    color: Colors.grey),
+                style: TextStyle(fontSize: Dimensions.fontSizeExtraLarge, color: Colors.grey),
               ),
             ],
           ),
@@ -99,14 +99,11 @@ class _CollegeselectingState extends State<Collegeselecting> {
               ),
               Text(
                 'College',
-                style: GoogleFonts.poppins(
-                    fontSize: 35,
-                    color: ColorResources.txcolour,
-                    fontWeight: FontWeight.w600),
-              )
+                style: GoogleFonts.poppins(fontSize: 35, color: ColorResources.txcolour, fontWeight: FontWeight.w600),
+              ),
             ],
           ),
-          Container(
+          SizedBox(
             height: 650,
             width: double.infinity,
             child: ListView.builder(
@@ -114,37 +111,22 @@ class _CollegeselectingState extends State<Collegeselecting> {
                 itemBuilder: (BuildContext context, var index) {
                   return InkWell(
                     onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const CollegeAppling()));
+                      Navigator.push(context, SizeTransition1(CollegeAppling()));
                     },
                     child: Container(
                       height: 105,
                       margin: EdgeInsets.all(10),
                       width: 40,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20),
-                          boxShadow: const [
-                            BoxShadow(
-                                color: Color.fromARGB(84, 158, 158, 158),
-                                blurRadius: 4,
-                                offset: Offset(0, 3))
-                          ],
-                          color: Colors.white),
+                      decoration: BoxDecoration(borderRadius: BorderRadius.circular(20), boxShadow: const [BoxShadow(color: Color.fromARGB(84, 158, 158, 158), blurRadius: 4, offset: Offset(0, 3))], color: Colors.white),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Image(
-                              width: 110,
-                              height: 100,
-                              image: AssetImage("assets/globee.png")),
+                          Image(width: 110, height: 100, image: AssetImage("assets/globee.png")),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
                                   Text(
                                     "ABC university",
@@ -194,10 +176,7 @@ class _CollegeselectingState extends State<Collegeselecting> {
                                   ),
                                   Text(
                                     '6 days left',
-                                    style: TextStyle(
-                                        color: Colors.grey,
-                                        fontSize:
-                                            Dimensions.fontSizeExtraSmall),
+                                    style: TextStyle(color: Colors.grey, fontSize: Dimensions.fontSizeExtraSmall),
                                   ),
                                   const SizedBox(
                                     width: 88,
@@ -207,12 +186,26 @@ class _CollegeselectingState extends State<Collegeselecting> {
                                   //   size: 35,
                                   //   color: Colors.grey,
                                   // ),
-                                  Image.asset('assets/Like.png')
+
+                                  GestureDetector(
+                                    onTap: () {
+                                      setState(() {
+                                        toggleLike(index);
+                                      });
+                                    },
+                                    child: isLikedList[index]
+                                        ? Image.asset(width: 30, height: 30, 'assets/liked.png')
+                                        : Image.asset(
+                                            width: 30,
+                                            height: 30,
+                                            'assets/Like.png',
+                                          ),
+                                  )
                                 ],
                               )
                             ],
                           ),
-                          Row(
+                          const Row(
                             mainAxisAlignment: MainAxisAlignment.end,
                             children: const [],
                           )

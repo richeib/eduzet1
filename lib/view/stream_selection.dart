@@ -17,7 +17,6 @@ class stream_Selection extends StatelessWidget {
         leading: const BackButton(
           color: Colors.black, // <-- SEE HERE
         ),
-        centerTitle: true,
         title: Text(
           'Banglore',
           style: TextStyle(color: Color.fromARGB(255, 10, 85, 147)),
@@ -27,8 +26,7 @@ class stream_Selection extends StatelessWidget {
         actions: [
           InkWell(
             onTap: () {
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => Profile2()));
+              Navigator.push(context, MaterialPageRoute(builder: (context) => Profile2()));
             },
             child: Container(
               margin: EdgeInsets.all(10),
@@ -68,10 +66,7 @@ class stream_Selection extends StatelessWidget {
                 ),
                 Text(
                   'Stream',
-                  style: GoogleFonts.poppins(
-                      fontSize: 35,
-                      fontWeight: FontWeight.w600,
-                      color: ColorResources.txcolour),
+                  style: GoogleFonts.poppins(fontSize: 35, fontWeight: FontWeight.w600, color: ColorResources.txcolour),
                 ),
               ],
             ),
@@ -80,15 +75,13 @@ class stream_Selection extends StatelessWidget {
             ),
             CustomButton3(
               onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => CourseSelection()));
+                Navigator.push(context, MaterialPageRoute(builder: (context) => CourseSelection()));
               },
               btnTxtc: "Technology",
             ),
             CustomButton3(
               onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => CourseSelection()));
+                Navigator.push(context, MaterialPageRoute(builder: (context) => CourseSelection()));
               },
               btnTxtc: "Medical",
             ),
@@ -105,29 +98,25 @@ class stream_Selection extends StatelessWidget {
             ),
             CustomButton3(
               onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => CourseSelection()));
+                Navigator.push(context, MaterialPageRoute(builder: (context) => CourseSelection()));
               },
               btnTxtc: "Art",
             ),
             CustomButton3(
               onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => CourseSelection()));
+                Navigator.push(context, MaterialPageRoute(builder: (context) => CourseSelection()));
               },
               btnTxtc: "Design",
             ),
             CustomButton3(
               onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => CourseSelection()));
+                Navigator.push(context, MaterialPageRoute(builder: (context) => CourseSelection()));
               },
               btnTxtc: "Business",
             ),
             CustomButton3(
               onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => CourseSelection()));
+                Navigator.push(context, MaterialPageRoute(builder: (context) => CourseSelection()));
               },
               btnTxtc: "Diploma",
             ),
@@ -145,11 +134,7 @@ class stream_Selection extends StatelessWidget {
               //     MaterialPageRoute(builder: (context) => Collegeselecting()));
             },
             child: Container(
-              decoration: BoxDecoration(
-                  color: ColorResources.btcolour,
-                  borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(25),
-                      bottomLeft: Radius.circular(25))),
+              decoration: BoxDecoration(color: ColorResources.btcolour, borderRadius: BorderRadius.only(topLeft: Radius.circular(25), bottomLeft: Radius.circular(25))),
               height: 54,
               width: 210,
               child: Center(
@@ -167,9 +152,7 @@ class stream_Selection extends StatelessWidget {
                     ),
                     Text(
                       'Search',
-                      style: TextStyle(
-                          fontSize: Dimensions.fontSizeDefault,
-                          color: Colors.white),
+                      style: TextStyle(fontSize: Dimensions.fontSizeDefault, color: Colors.white),
                     ),
                   ],
                 ),
@@ -183,11 +166,7 @@ class stream_Selection extends StatelessWidget {
           InkWell(
             onTap: () {},
             child: Container(
-              decoration: BoxDecoration(
-                  color: ColorResources.btcolour,
-                  borderRadius: BorderRadius.only(
-                      topRight: Radius.circular(25),
-                      bottomRight: Radius.circular(25))),
+              decoration: BoxDecoration(color: ColorResources.btcolour, borderRadius: BorderRadius.only(topRight: Radius.circular(25), bottomRight: Radius.circular(25))),
               height: 54,
               width: 150,
               child: Center(
@@ -205,9 +184,7 @@ class stream_Selection extends StatelessWidget {
                     ),
                     Text(
                       'Call us',
-                      style: TextStyle(
-                          fontSize: Dimensions.fontSizeDefault,
-                          color: Colors.white),
+                      style: TextStyle(fontSize: Dimensions.fontSizeDefault, color: Colors.white),
                     ),
                   ],
                 ),

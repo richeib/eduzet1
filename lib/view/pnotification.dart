@@ -49,8 +49,7 @@ class _noNotificationState extends State<noNotification> {
         actions: [
           InkWell(
             onTap: () {
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => Profile2()));
+              Navigator.push(context, MaterialPageRoute(builder: (context) => Profile2()));
             },
             child: Container(
               margin: EdgeInsets.all(10),
@@ -68,22 +67,20 @@ class _noNotificationState extends State<noNotification> {
         children: [
           Container(
             // nonotification7v7 (39:518)
-            padding: EdgeInsets.fromLTRB(
-                18.67 * fem, 39.48 * fem, 18.67 * fem, 46.56 * fem),
+            padding: EdgeInsets.fromLTRB(18.67 * fem, 39.48 * fem, 18.67 * fem, 46.56 * fem),
             width: double.infinity,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               color: Color(0xffffffff),
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                SizedBox(
+                const SizedBox(
                   height: 50,
                 ),
                 Container(
                   // empty1011tjq (116:458)
-                  margin:
-                      EdgeInsets.fromLTRB(0 * fem, 0 * fem, 0 * fem, 9.6 * fem),
+                  margin: EdgeInsets.fromLTRB(0 * fem, 0 * fem, 0 * fem, 9.6 * fem),
                   width: 322.66 * fem,
                   height: 215.11 * fem,
                   child: Image.asset(
@@ -93,8 +90,7 @@ class _noNotificationState extends State<noNotification> {
                 ),
                 Container(
                   // nonotificationsobu (116:460)
-                  margin: EdgeInsets.fromLTRB(
-                      0 * fem, 0 * fem, 0 * fem, 185.84 * fem),
+                  margin: EdgeInsets.fromLTRB(0 * fem, 0 * fem, 0 * fem, 185.84 * fem),
                   child: Text(
                     'No notifications',
                     style: GoogleFonts.poppins(

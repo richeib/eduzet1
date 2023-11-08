@@ -5,11 +5,9 @@ import 'package:eduzet/view/tprofile.dart';
 import 'package:eduzet/view/ureview.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:shimmer/shimmer.dart';
-
 import '../widgets/colour.dart';
 import 'ohome.dart';
 
@@ -110,7 +108,7 @@ class _CollegeApplingState extends State<CollegeAppling> {
             const SizedBox(
               height: 8,
             ),
-             Row(
+            Row(
               children: [
                 SizedBox(width: 20),
                 Text(
@@ -220,7 +218,7 @@ class _CollegeApplingState extends State<CollegeAppling> {
                       )
                     ],
                   ),
-                   Text(
+                  Text(
                     "• Accredited by National Assessment and Accreditation Council\n (NAAC) of UGC\n• All India Council for Technical Education (AICTE)",
                     style: TextStyle(
                       fontFamily: "Poppins",
@@ -390,35 +388,36 @@ class _CollegeApplingState extends State<CollegeAppling> {
                     ),
                   ),
                   AnimatedContainer(
-                      curve: Curves.fastOutSlowIn,
-                      padding: const EdgeInsets.all(10),
-                      margin: EdgeInsets.only(top: isExpanded2 ? 10 : 0),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(5),
-                        border: Border.all(color: ColorResources.txcolour, width: 1),
-                      ),
-                      duration: const Duration(milliseconds: 500),
-                      height: isExpanded2 ? 10.h : 0.0,
-                      width: double.maxFinite,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            "• Lorem Ipsum is simply dummy text of the printing ",
-                            style: GoogleFonts.poppins(
-                              fontSize: Dimensions.fontSizeSmall,
-                              color: ColorResources.txcolour,
-                            ),
+                    curve: Curves.fastOutSlowIn,
+                    padding: const EdgeInsets.all(10),
+                    margin: EdgeInsets.only(top: isExpanded2 ? 10 : 0),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(5),
+                      border: Border.all(color: ColorResources.txcolour, width: 1),
+                    ),
+                    duration: const Duration(milliseconds: 500),
+                    height: isExpanded2 ? 10.h : 0.0,
+                    width: double.maxFinite,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "• Lorem Ipsum is simply dummy text of the printing ",
+                          style: GoogleFonts.poppins(
+                            fontSize: Dimensions.fontSizeSmall,
+                            color: ColorResources.txcolour,
                           ),
-                          Text(
-                            "• ypesetting industry",
-                            style: GoogleFonts.poppins(
-                              fontSize: Dimensions.fontSizeSmall,
-                              color: ColorResources.txcolour,
-                            ),
+                        ),
+                        Text(
+                          "• ypesetting industry",
+                          style: GoogleFonts.poppins(
+                            fontSize: Dimensions.fontSizeSmall,
+                            color: ColorResources.txcolour,
                           ),
-                        ],
-                      )),
+                        ),
+                      ],
+                    ),
+                  ),
                 ],
               ),
             ),
@@ -577,7 +576,7 @@ class _CollegeApplingState extends State<CollegeAppling> {
                       child: Shimmer.fromColors(
                         baseColor: Colors.white,
                         highlightColor: Colors.pink,
-                        child:  Text(
+                        child:const Text(
                           '✔️ Apply Now',
                           textAlign: TextAlign.center,
                           style: TextStyle(

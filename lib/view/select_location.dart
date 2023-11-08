@@ -17,7 +17,6 @@ class selectLocation extends StatelessWidget {
         leading: const BackButton(
           color: Colors.black, // <-- SEE HERE
         ),
-        centerTitle: true,
         elevation: 0,
         title: Title(
             color: Colors.black,
@@ -31,8 +30,7 @@ class selectLocation extends StatelessWidget {
         actions: [
           InkWell(
             onTap: () {
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => Profile2()));
+              Navigator.push(context, MaterialPageRoute(builder: (context) => Profile2()));
             },
             child: Container(
               margin: EdgeInsets.all(10),
@@ -53,8 +51,7 @@ class selectLocation extends StatelessWidget {
               child: Container(
                 width: 420,
                 height: 185,
-                child: Image.asset('assets/banalore_line [Converted]-01 1.png',
-                    fit: BoxFit.fitWidth),
+                child: Image.asset('assets/banalore_line [Converted]-01 1.png', fit: BoxFit.fitWidth),
               ),
             ),
             Row(
@@ -64,9 +61,7 @@ class selectLocation extends StatelessWidget {
                 ),
                 Text(
                   'Choose your',
-                  style: TextStyle(
-                      fontSize: Dimensions.fontSizeExtraLarge,
-                      color: Colors.grey),
+                  style: TextStyle(fontSize: Dimensions.fontSizeExtraLarge, color: Colors.grey),
                 ),
               ],
             ),
@@ -77,10 +72,7 @@ class selectLocation extends StatelessWidget {
                 ),
                 Text(
                   'location',
-                  style: TextStyle(
-                      fontSize: 35,
-                      color: ColorResources.txcolour,
-                      fontWeight: FontWeight.w600),
+                  style: TextStyle(fontSize: 35, color: ColorResources.txcolour, fontWeight: FontWeight.w600),
                 ),
               ],
             ),
@@ -102,8 +94,7 @@ class selectLocation extends StatelessWidget {
                       color: Colors.grey,
                     ),
                     labelText: 'Search location',
-                    labelStyle:
-                        GoogleFonts.poppins(fontSize: 10, color: Colors.grey),
+                    labelStyle: GoogleFonts.poppins(fontSize: 10, color: Colors.grey),
                     border: InputBorder.none,
                   ),
                 )),
@@ -119,10 +110,7 @@ class selectLocation extends StatelessWidget {
               children: [
                 CustomButton2(
                   onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => stream_Selection()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => stream_Selection()));
                   },
                   btnTxtb: "Bangalore",
                 ),
@@ -131,10 +119,7 @@ class selectLocation extends StatelessWidget {
                 ),
                 CustomButton2(
                   onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => stream_Selection()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => stream_Selection()));
                   },
                   btnTxtb: "Kochi",
                 ),
@@ -145,10 +130,7 @@ class selectLocation extends StatelessWidget {
               children: [
                 CustomButton2(
                   onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => stream_Selection()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => stream_Selection()));
                   },
                   btnTxtb: "Mangalore",
                 ),
@@ -157,10 +139,7 @@ class selectLocation extends StatelessWidget {
                 ),
                 CustomButton2(
                   onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => stream_Selection()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => stream_Selection()));
                   },
                   btnTxtb: "Chennai",
                 ),
@@ -171,10 +150,7 @@ class selectLocation extends StatelessWidget {
               children: [
                 CustomButton2(
                   onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => stream_Selection()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => stream_Selection()));
                   },
                   btnTxtb: "Calicut",
                 ),
@@ -183,10 +159,7 @@ class selectLocation extends StatelessWidget {
                 ),
                 CustomButton2(
                   onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => stream_Selection()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => stream_Selection()));
                   },
                   btnTxtb: "Mysore",
                 ),
@@ -197,10 +170,7 @@ class selectLocation extends StatelessWidget {
             ),
             CustomButton(
               onTap: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => stream_Selection()));
+                Navigator.push(context, MaterialPageRoute(builder: (context) => stream_Selection()));
               },
               btnTxt: "CALL US",
             ),
