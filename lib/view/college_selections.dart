@@ -1,7 +1,7 @@
+import 'package:eduzet/utill/colour.dart';
 import 'package:eduzet/utill/dimensions.dart';
-import 'package:eduzet/view/kcollegeappling.dart';
+import 'package:eduzet/view/college_appling/college_appling.dart';
 import 'package:eduzet/view/tprofile.dart';
-import 'package:eduzet/widgets/colour.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
@@ -34,7 +34,10 @@ class _CollegeselectingState extends State<Collegeselecting> {
         margin: const EdgeInsets.all(5),
         height: 60,
         width: double.infinity,
-        decoration: BoxDecoration(borderRadius: BorderRadius.circular(50), color: ColorResources.btcolour),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(50),
+          color: ColorResources.btcolour,
+        ),
         child: const GNav(color: Colors.transparent, activeColor: Colors.white, tabBackgroundColor: Color.fromARGB(80, 4, 50, 158), curve: Curves.easeOutExpo, padding: EdgeInsets.symmetric(horizontal: 40, vertical: 15), gap: 5, tabs: [
           GButton(
             icon: Icons.monitor,
@@ -62,11 +65,11 @@ class _CollegeselectingState extends State<Collegeselecting> {
         actions: [
           InkWell(
             onTap: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) => Profile2()));
+              Navigator.push(context, MaterialPageRoute(builder: (context) => const Profile2()));
             },
             child: Container(
-              margin: EdgeInsets.all(10),
-              child: CircleAvatar(
+              margin: const EdgeInsets.all(10),
+              child: const CircleAvatar(
                 radius: 15,
                 backgroundImage: AssetImage(
                   'assets/user 1.png',
@@ -81,9 +84,9 @@ class _CollegeselectingState extends State<Collegeselecting> {
           const SizedBox(
             height: 25,
           ),
-          Row(
+          const Row(
             children: [
-              const SizedBox(
+              SizedBox(
                 width: 17,
               ),
               Text(
@@ -111,17 +114,17 @@ class _CollegeselectingState extends State<Collegeselecting> {
                 itemBuilder: (BuildContext context, var index) {
                   return InkWell(
                     onTap: () {
-                      Navigator.push(context, SizeTransition1(CollegeAppling()));
+                      Navigator.push(context, SizeTransition1(const CollegeAppling()));
                     },
                     child: Container(
                       height: 105,
-                      margin: EdgeInsets.all(10),
+                      margin: const EdgeInsets.all(10),
                       width: 40,
                       decoration: BoxDecoration(borderRadius: BorderRadius.circular(20), boxShadow: const [BoxShadow(color: Color.fromARGB(84, 158, 158, 158), blurRadius: 4, offset: Offset(0, 3))], color: Colors.white),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Image(width: 110, height: 100, image: AssetImage("assets/globee.png")),
+                          const Image(width: 110, height: 100, image: AssetImage("assets/globee.png")),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
@@ -155,7 +158,7 @@ class _CollegeselectingState extends State<Collegeselecting> {
                               Text("china",
                                   style: GoogleFonts.poppins(
                                     fontSize: Dimensions.fontSizeExtraSmall,
-                                    color: Color(0xff939393),
+                                    color: const Color(0xff939393),
                                   )),
                               const SizedBox(
                                 height: 8,
@@ -171,10 +174,10 @@ class _CollegeselectingState extends State<Collegeselecting> {
                                       letterSpacing: 0.20,
                                     ),
                                   ),
-                                  SizedBox(
+                                  const SizedBox(
                                     width: 15,
                                   ),
-                                  Text(
+                                  const Text(
                                     '6 days left',
                                     style: TextStyle(color: Colors.grey, fontSize: Dimensions.fontSizeExtraSmall),
                                   ),

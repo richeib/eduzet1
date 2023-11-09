@@ -1,11 +1,11 @@
 import 'package:eduzet/utill/dimensions.dart';
-import 'package:eduzet/view/ohome.dart';
+import 'package:eduzet/view/home_screen/home_screen.dart';
 import 'package:eduzet/view/pnotification.dart';
 import 'package:eduzet/view/qwhishlist.dart';
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 
-import '../widgets/colour.dart';
+import '../utill/colour.dart';
 
 class Whishlist extends StatefulWidget {
   const Whishlist({super.key});
@@ -22,52 +22,43 @@ class _whishlistState extends State<Whishlist> {
         margin: EdgeInsets.all(5),
         height: 60,
         width: double.infinity,
-        decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(50),
-            color: ColorResources.btcolour),
-        child: GNav(
-            color: Colors.transparent,
-            activeColor: Colors.white,
-            tabBackgroundColor: Color.fromARGB(80, 4, 50, 158),
-            curve: Curves.easeOutExpo,
-            padding: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
-            gap: 4,
-            tabs: [
-              GButton(
-                  icon: Icons.monitor,
-                  iconColor: Colors.white,
-                  text: 'Home',
-                  onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => DefaultHome()));
-                  }),
-              GButton(
-                  icon: Icons.work_sharp,
-                  iconColor: Colors.white,
-                  text: 'Notification',
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => noNotification()));
-                  }),
-              GButton(
-                  icon: Icons.heart_broken,
-                  iconColor: Colors.white,
-                  text: 'Whishlist',
-                  onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => nowhishlist()));
-                  }),
-              GButton(
-                  icon: Icons.call,
-                  iconColor: Colors.white,
-                  text: 'Call Us',
-                  onPressed: () {
-                    // Navigator.push(context,
-                    //     MaterialPageRoute(builder: (context) => DefaultHome()));
-                  }),
-            ]),
+        decoration: BoxDecoration(borderRadius: BorderRadius.circular(50), color: ColorResources.btcolour),
+        child: GNav(color: Colors.transparent, activeColor: Colors.white, tabBackgroundColor: Color.fromARGB(80, 4, 50, 158), curve: Curves.easeOutExpo, padding: EdgeInsets.symmetric(horizontal: 15, vertical: 15), gap: 4, tabs: [
+          GButton(
+              icon: Icons.monitor,
+              iconColor: Colors.white,
+              text: 'Home',
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => HomeScreen(),
+                  ),
+                );
+              }),
+          GButton(
+              icon: Icons.work_sharp,
+              iconColor: Colors.white,
+              text: 'Notification',
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => noNotification()));
+              }),
+          GButton(
+              icon: Icons.heart_broken,
+              iconColor: Colors.white,
+              text: 'Whishlist',
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => nowhishlist()));
+              }),
+          GButton(
+              icon: Icons.call,
+              iconColor: Colors.white,
+              text: 'Call Us',
+              onPressed: () {
+                // Navigator.push(context,
+                //     MaterialPageRoute(builder: (context) => DefaultHome()));
+              }),
+        ]),
       ),
       appBar: AppBar(
         leading: const BackButton(
@@ -130,15 +121,7 @@ class _whishlistState extends State<Whishlist> {
                       padding: EdgeInsets.all(10),
                       margin: EdgeInsets.all(10),
                       width: 40,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20),
-                          boxShadow: [
-                            BoxShadow(
-                                color: Colors.grey,
-                                blurRadius: 6,
-                                offset: Offset(0, 7))
-                          ],
-                          color: Colors.white),
+                      decoration: BoxDecoration(borderRadius: BorderRadius.circular(20), boxShadow: [BoxShadow(color: Colors.grey, blurRadius: 6, offset: Offset(0, 7))], color: Colors.white),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -146,35 +129,26 @@ class _whishlistState extends State<Whishlist> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
                                   Text(
                                     "Attapadi university",
-                                    style: TextStyle(
-                                        color: ColorResources.txcolour,
-                                        fontSize: Dimensions.fontSizeOverLarge),
+                                    style: TextStyle(color: ColorResources.txcolour, fontSize: Dimensions.fontSizeOverLarge),
                                   ),
                                   SizedBox(
                                     width: 20,
                                   ),
                                   Text(
                                     "20000",
-                                    style: TextStyle(
-                                        color: ColorResources.txcolour,
-                                        fontSize:
-                                            Dimensions.fontSizeExtraLarge),
+                                    style: TextStyle(color: ColorResources.txcolour, fontSize: Dimensions.fontSizeExtraLarge),
                                   ),
                                 ],
                               ),
-                              Text("china",
-                                  style: TextStyle(
-                                      color: ColorResources.txcolour)),
+                              Text("china", style: TextStyle(color: ColorResources.txcolour)),
                               SizedBox(
                                 height: 10,
                               ),
-                              Text("remote",
-                                  style: TextStyle(color: Colors.pink))
+                              Text("remote", style: TextStyle(color: Colors.pink))
                             ],
                           ),
                           Row(

@@ -1,6 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:eduzet/utill/dimensions.dart';
 import 'package:eduzet/view/LCollege.dart';
+import 'package:eduzet/view/home_screen/home_screen.dart';
 import 'package:eduzet/view/tprofile.dart';
 import 'package:eduzet/view/ureview.dart';
 import 'package:flutter/material.dart';
@@ -8,8 +9,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:shimmer/shimmer.dart';
-import '../widgets/colour.dart';
-import 'ohome.dart';
+import 'package:eduzet/utill/colour.dart';
 
 class CollegeAppling extends StatefulWidget {
   const CollegeAppling({super.key});
@@ -22,7 +22,6 @@ class _CollegeApplingState extends State<CollegeAppling> {
   bool isLiked = false;
 
   void toggleLike() {
-    print("object");
     setState(() {
       isLiked = !isLiked;
     });
@@ -108,12 +107,15 @@ class _CollegeApplingState extends State<CollegeAppling> {
             const SizedBox(
               height: 8,
             ),
-            Row(
+            const Row(
               children: [
                 SizedBox(width: 20),
                 Text(
                   'Delhi',
-                  style: TextStyle(color: Colors.grey, fontSize: Dimensions.fontSizeDefault),
+                  style: TextStyle(
+                    color: Colors.grey,
+                    fontSize: Dimensions.fontSizeDefault,
+                  ),
                 ),
               ],
             ),
@@ -539,6 +541,7 @@ class _CollegeApplingState extends State<CollegeAppling> {
           ],
         ),
       ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: Row(
         children: [
           const SizedBox(
@@ -546,7 +549,7 @@ class _CollegeApplingState extends State<CollegeAppling> {
           ),
           InkWell(
             onTap: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) => const DefaultHome()));
+              Navigator.push(context, MaterialPageRoute(builder: (context) => const HomeScreen()));
             },
             child: Container(
               decoration: const BoxDecoration(color: ColorResources.btcolour, borderRadius: BorderRadius.only(topLeft: Radius.circular(25), bottomLeft: Radius.circular(25))),
@@ -571,12 +574,17 @@ class _CollegeApplingState extends State<CollegeAppling> {
                   child: Container(
                     height: 40,
                     width: 140,
-                    decoration: const BoxDecoration(color: Color(0xFFd45092), borderRadius: BorderRadius.all(Radius.circular(20))),
+                    decoration: const BoxDecoration(
+                      color: Color(0xFFd45092),
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(20),
+                      ),
+                    ),
                     child: Center(
                       child: Shimmer.fromColors(
                         baseColor: Colors.white,
                         highlightColor: Colors.pink,
-                        child:const Text(
+                        child: const Text(
                           '✔️ Apply Now',
                           textAlign: TextAlign.center,
                           style: TextStyle(

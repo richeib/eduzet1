@@ -1,4 +1,4 @@
-import 'package:eduzet/view/ohome.dart';
+import 'package:eduzet/view/home_screen/home_screen.dart';
 import 'package:eduzet/view/pnotification.dart';
 import 'package:eduzet/view/tprofile.dart';
 import 'package:flutter/material.dart';
@@ -6,7 +6,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 
 import '../utill/dimensions.dart';
-import '../widgets/colour.dart';
+import 'package:eduzet/utill/colour.dart';
 
 class nowhishlist extends StatelessWidget {
   const nowhishlist({super.key});
@@ -46,8 +46,7 @@ class nowhishlist extends StatelessWidget {
         actions: [
           InkWell(
             onTap: () {
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => Profile2()));
+              Navigator.push(context, MaterialPageRoute(builder: (context) => Profile2()));
             },
             child: Container(
               margin: EdgeInsets.all(10),

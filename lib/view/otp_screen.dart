@@ -1,6 +1,6 @@
 import 'package:eduzet/utill/dimensions.dart';
 import 'package:eduzet/view/otp_send_screen.dart';
-import 'package:eduzet/widgets/colour.dart';
+import 'package:eduzet/utill/colour.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:lottie/lottie.dart';
@@ -29,16 +29,13 @@ class OtpScreen extends StatelessWidget {
                 'assets/Eduzet_Logo.png',
               ),
             ),
-            Lottie.asset('animation/animation_lkj9vinn.json',
-                width: 150 * ffem, height: 150 * ffem),
+            Lottie.asset('animation/animation_lkj9vinn.json', width: 150 * ffem, height: 150 * ffem),
             const SizedBox(
               height: 25,
             ),
             Text(
               'Enter your Number',
-              style: GoogleFonts.poppins(
-                  fontSize: Dimensions.fontSizeDefault,
-                  color: ColorResources.txcolour),
+              style: GoogleFonts.poppins(fontSize: Dimensions.fontSizeDefault, color: ColorResources.txcolour),
             ),
             SizedBox(
               height: 25,
@@ -48,10 +45,7 @@ class OtpScreen extends StatelessWidget {
                 height: 51,
                 padding: EdgeInsets.only(left: 20),
                 width: 330,
-                decoration: BoxDecoration(
-                    border:
-                        Border.all(width: 1, color: ColorResources.txcolour),
-                    borderRadius: BorderRadius.circular(50)),
+                decoration: BoxDecoration(border: Border.all(width: 1, color: ColorResources.txcolour), borderRadius: BorderRadius.circular(50)),
                 child: Row(
                   children: [
                     Text(
@@ -83,14 +77,8 @@ class OtpScreen extends StatelessWidget {
                           //n is maximum number of characters you want in textfield
                         ],
                         keyboardType: TextInputType.number,
-                        style: GoogleFonts.poppins(
-                            fontSize: Dimensions.fontSizeLarge),
-                        decoration: InputDecoration(
-                            hintStyle: GoogleFonts.poppins(
-                                fontSize: Dimensions.fontSizeDefault,
-                                color: ColorResources.cardShadowColor),
-                            border: InputBorder.none,
-                            hintText: 'XXXX-XXX-XXXX'),
+                        style: GoogleFonts.poppins(fontSize: Dimensions.fontSizeLarge),
+                        decoration: InputDecoration(hintStyle: GoogleFonts.poppins(fontSize: Dimensions.fontSizeDefault, color: ColorResources.cardShadowColor), border: InputBorder.none, hintText: 'XXXX-XXX-XXXX'),
                       ),
                     ),
                   ],
@@ -102,8 +90,7 @@ class OtpScreen extends StatelessWidget {
             ),
             CustomButton(
               onTap: () {
-                Navigator.push(
-                    context, MaterialPageRoute(builder: (context) => opt()));
+                Navigator.push(context, MaterialPageRoute(builder: (context) => opt()));
               },
               btnTxt: "GET OTP",
             ),
@@ -112,10 +99,7 @@ class OtpScreen extends StatelessWidget {
             ),
             Text(
               'Or continue with',
-              style: GoogleFonts.poppins(
-                  fontSize: Dimensions.fontSizeSmall,
-                  textStyle:
-                      GoogleFonts.poppins(color: ColorResources.txcolour)),
+              style: GoogleFonts.poppins(fontSize: Dimensions.fontSizeSmall, textStyle: GoogleFonts.poppins(color: ColorResources.txcolour)),
             ),
             SizedBox(
               height: 15,
@@ -123,10 +107,7 @@ class OtpScreen extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                SizedBox(
-                    height: 25,
-                    width: 25,
-                    child: Image.asset('assets/google_PNG19635.png')),
+                SizedBox(height: 25, width: 25, child: Image.asset('assets/google_PNG19635.png')),
                 const SizedBox(
                   width: 2,
                 ),

@@ -1,7 +1,7 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:eduzet/utill/dimensions.dart';
 import 'package:eduzet/view/otp_screen.dart';
-import 'package:eduzet/widgets/colour.dart';
+import 'package:eduzet/utill/colour.dart';
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';

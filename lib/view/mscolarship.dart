@@ -1,5 +1,5 @@
 import 'package:eduzet/view/tprofile.dart';
-import 'package:eduzet/widgets/colour.dart';
+import 'package:eduzet/utill/colour.dart';
 import 'package:eduzet/widgets/navigator_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -26,8 +26,7 @@ class _ScolarshipState extends State<Scolarship> {
         actions: [
           InkWell(
             onTap: () {
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => Profile2()));
+              Navigator.push(context, MaterialPageRoute(builder: (context) => Profile2()));
             },
             child: Container(
               margin: EdgeInsets.all(10),
@@ -55,10 +54,7 @@ class _ScolarshipState extends State<Scolarship> {
             ),
             Text(
               'Financial Aid',
-              style: GoogleFonts.poppins(
-                  fontSize: Dimensions.fontSizeOverLarge,
-                  color: ColorResources.txcolour,
-                  fontWeight: FontWeight.w500),
+              style: GoogleFonts.poppins(fontSize: Dimensions.fontSizeOverLarge, color: ColorResources.txcolour, fontWeight: FontWeight.w500),
             ),
             Expanded(
               child: ListView.builder(
@@ -66,18 +62,13 @@ class _ScolarshipState extends State<Scolarship> {
                   itemBuilder: (BuildContext context, var index) {
                     return InkWell(
                       onTap: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => DashboardScreen()));
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => DashboardScreen()));
                       },
                       child: Container(
                         height: 240,
                         margin: EdgeInsets.symmetric(vertical: 10),
                         width: 40,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20),
-                            color: Color(0xffC5C8E2)),
+                        decoration: BoxDecoration(borderRadius: BorderRadius.circular(20), color: Color(0xffC5C8E2)),
                         child: Column(
                           children: [
                             Expanded(
@@ -86,16 +77,13 @@ class _ScolarshipState extends State<Scolarship> {
                                   padding: const EdgeInsets.all(30.0),
                                   child: Container(
                                     child: Column(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.start,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
+                                      mainAxisAlignment: MainAxisAlignment.start,
+                                      crossAxisAlignment: CrossAxisAlignment.start,
                                       children: [
                                         Text(
                                           "Admission Financial aid",
                                           style: GoogleFonts.poppins(
-                                            fontSize:
-                                                Dimensions.fontSizeDefault,
+                                            fontSize: Dimensions.fontSizeDefault,
                                             fontWeight: FontWeight.w400,
                                             color: ColorResources.txcolour,
                                           ),

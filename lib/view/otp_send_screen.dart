@@ -1,6 +1,6 @@
 import 'package:eduzet/utill/dimensions.dart';
 import 'package:eduzet/view/first_profile.dart';
-import 'package:eduzet/widgets/colour.dart';
+import 'package:eduzet/utill/colour.dart';
 import 'package:eduzet/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -71,10 +71,7 @@ class _optState extends State<opt> {
         iconTheme: IconThemeData(color: Colors.black),
         title: Text(
           "Verify it's you",
-          style: GoogleFonts.poppins(
-              fontSize: Dimensions.fontSizeLarge,
-              fontWeight: FontWeight.w600,
-              color: Colors.black),
+          style: GoogleFonts.poppins(fontSize: Dimensions.fontSizeLarge, fontWeight: FontWeight.w600, color: Colors.black),
         ),
         backgroundColor: Colors.white,
       ),
@@ -92,17 +89,12 @@ class _optState extends State<opt> {
                 width: 300,
                 child: RichText(
                   text: TextSpan(
-                    style: GoogleFonts.poppins(
-                        color: Colors.grey,
-                        fontSize: Dimensions.fontSizeDefault),
+                    style: GoogleFonts.poppins(color: Colors.grey, fontSize: Dimensions.fontSizeDefault),
                     children: [
-                      const TextSpan(
-                          text:
-                              "We have sent you the verification code to this Mobile number"),
+                      const TextSpan(text: "We have sent you the verification code to this Mobile number"),
                       TextSpan(
                         text: " +91 8592995659",
-                        style: GoogleFonts.poppins(
-                            color: Colors.black, fontWeight: FontWeight.bold),
+                        style: GoogleFonts.poppins(color: Colors.black, fontWeight: FontWeight.bold),
                       )
                     ],
                   ),
@@ -127,8 +119,7 @@ class _optState extends State<opt> {
             ),
             CustomButton(
               onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => Profile()));
+                Navigator.push(context, MaterialPageRoute(builder: (context) => Profile()));
               },
               btnTxt: "VERIFY",
             ),
@@ -137,19 +128,14 @@ class _optState extends State<opt> {
               children: [
                 Text(
                   "Didn't get the code?",
-                  style: GoogleFonts.poppins(
-                      color: ColorResources.cardShadowColor,
-                      fontSize: Dimensions.fontSizeSmall),
+                  style: GoogleFonts.poppins(color: ColorResources.cardShadowColor, fontSize: Dimensions.fontSizeSmall),
                 ),
                 const SizedBox(
                   width: 5,
                 ),
                 Text(
                   'Resent the code',
-                  style: GoogleFonts.poppins(
-                      color: Colors.pink,
-                      fontSize: Dimensions.fontSizeSmall,
-                      fontWeight: FontWeight.w700),
+                  style: GoogleFonts.poppins(color: Colors.pink, fontSize: Dimensions.fontSizeSmall, fontWeight: FontWeight.w700),
                 )
               ],
             ),

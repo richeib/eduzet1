@@ -1,29 +1,24 @@
 import 'package:eduzet/utill/dimensions.dart';
-import 'package:eduzet/view/ohome.dart';
+import 'package:eduzet/view/home_screen/home_screen.dart';
 import 'package:eduzet/view/pnotification.dart';
 import 'package:eduzet/view/qwhishlist.dart';
 import 'package:eduzet/view/swhishlist.dart';
 import 'package:eduzet/view/tprofile.dart';
-import 'package:eduzet/widgets/colour.dart';
+import 'package:eduzet/utill/colour.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../view/LCollege.dart';
-
 class DashboardScreen extends StatefulWidget {
+  const DashboardScreen({super.key});
+
   @override
   DashboardScreenState createState() => DashboardScreenState();
 }
 
 class DashboardScreenState extends State<DashboardScreen> {
   var currentIndex = 0;
-  List<Widget> screen = [
-    DefaultHome(),
-    noNotification(),
-    nowhishlist(),
-    Profile2()
-  ];
+  List<Widget> screen = [const HomeScreen(), const noNotification(), const nowhishlist(), const Profile2()];
   @override
   Widget build(BuildContext context) {
     double displayWidth = MediaQuery.of(context).size.width;
@@ -38,7 +33,7 @@ class DashboardScreenState extends State<DashboardScreen> {
             BoxShadow(
               color: Colors.black.withOpacity(.1),
               blurRadius: 30,
-              offset: Offset(0, 10),
+              offset: const Offset(0, 10),
             ),
           ],
           borderRadius: BorderRadius.circular(50),
@@ -60,50 +55,41 @@ class DashboardScreenState extends State<DashboardScreen> {
             child: Stack(
               children: [
                 AnimatedContainer(
-                  duration: Duration(seconds: 1),
+                  duration: const Duration(seconds: 1),
                   curve: Curves.fastLinearToSlowEaseIn,
-                  width: index == currentIndex
-                      ? displayWidth * .32
-                      : displayWidth * .18,
+                  width: index == currentIndex ? displayWidth * .32 : displayWidth * .18,
                   alignment: Alignment.center,
                   child: AnimatedContainer(
-                    duration: Duration(seconds: 1),
+                    duration: const Duration(seconds: 1),
                     curve: Curves.fastLinearToSlowEaseIn,
                     height: index == currentIndex ? displayWidth * .12 : 0,
                     width: index == currentIndex ? displayWidth * .32 : 0,
                     decoration: BoxDecoration(
-                      color: index == currentIndex
-                          ? Colors.blueAccent.withOpacity(.2)
-                          : Colors.transparent,
+                      color: index == currentIndex ? Colors.blueAccent.withOpacity(.2) : Colors.transparent,
                       borderRadius: BorderRadius.circular(50),
                     ),
                   ),
                 ),
                 AnimatedContainer(
-                  duration: Duration(seconds: 1),
+                  duration: const Duration(seconds: 1),
                   curve: Curves.fastLinearToSlowEaseIn,
-                  width: index == currentIndex
-                      ? displayWidth * .31
-                      : displayWidth * .18,
+                  width: index == currentIndex ? displayWidth * .31 : displayWidth * .18,
                   alignment: Alignment.center,
                   child: Stack(
                     children: [
                       Row(
                         children: [
                           AnimatedContainer(
-                            duration: Duration(seconds: 1),
+                            duration: const Duration(seconds: 1),
                             curve: Curves.fastLinearToSlowEaseIn,
-                            width:
-                                index == currentIndex ? displayWidth * .12 : 0,
+                            width: index == currentIndex ? displayWidth * .12 : 0,
                           ),
                           AnimatedOpacity(
                             opacity: index == currentIndex ? 1 : 0,
-                            duration: Duration(seconds: 1),
+                            duration: const Duration(seconds: 1),
                             curve: Curves.fastLinearToSlowEaseIn,
                             child: Text(
-                              index == currentIndex
-                                  ? '${listOfStrings[index]}'
-                                  : '',
+                              index == currentIndex ? listOfStrings[index] : '',
                               style: GoogleFonts.poppins(
                                 color: Colors.white,
                                 fontWeight: FontWeight.w600,
@@ -116,17 +102,14 @@ class DashboardScreenState extends State<DashboardScreen> {
                       Row(
                         children: [
                           AnimatedContainer(
-                            duration: Duration(seconds: 1),
+                            duration: const Duration(seconds: 1),
                             curve: Curves.fastLinearToSlowEaseIn,
-                            width:
-                                index == currentIndex ? displayWidth * .03 : 20,
+                            width: index == currentIndex ? displayWidth * .03 : 20,
                           ),
                           Icon(
                             listOfIcons[index],
                             size: Dimensions.fontSizeExtraLarge,
-                            color: index == currentIndex
-                                ? Color.fromRGBO(255, 255, 255, 1)
-                                : Colors.white,
+                            color: index == currentIndex ? const Color.fromRGBO(255, 255, 255, 1) : Colors.white,
                           ),
                         ],
                       ),

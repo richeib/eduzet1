@@ -1,6 +1,6 @@
 import 'package:eduzet/utill/dimensions.dart';
 import 'package:eduzet/view/select_location.dart';
-import 'package:eduzet/widgets/colour.dart';
+import 'package:eduzet/utill/colour.dart';
 import 'package:eduzet/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';

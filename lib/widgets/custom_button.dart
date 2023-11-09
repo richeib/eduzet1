@@ -1,4 +1,4 @@
-import 'package:eduzet/widgets/colour.dart';
+import 'package:eduzet/utill/colour.dart';
 import 'package:flutter/material.dart';
 
 import 'package:google_fonts/google_fonts.dart';
@@ -34,11 +34,7 @@ class CustomButton extends StatelessWidget {
               gradient: const LinearGradient(
                 begin: Alignment(1, 0),
                 end: Alignment(-1.282, 0),
-                colors: <Color>[
-                  Color(0xff3f489e),
-                  Color(0xff595aa8),
-                  Color(0xff585aa8)
-                ],
+                colors: <Color>[Color(0xff3f489e), Color(0xff595aa8), Color(0xff585aa8)],
                 stops: <double>[0, 0.878, 0.982],
               ),
               boxShadow: [
@@ -54,12 +50,7 @@ class CustomButton extends StatelessWidget {
                 child: Text(
                   btnTxt!,
                   textAlign: TextAlign.center,
-                  style: GoogleFonts.poppins(
-                      fontSize: Dimensions.fontSizeDefault,
-                      textStyle: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white)),
+                  style: GoogleFonts.poppins(fontSize: Dimensions.fontSizeDefault, textStyle: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white)),
                 ),
               ),
             ),
@@ -204,12 +195,7 @@ class CustomButton2 extends StatelessWidget {
                 child: Text(
                   btnTxtb!,
                   textAlign: TextAlign.center,
-                  style: GoogleFonts.poppins(
-                      fontSize: Dimensions.fontSizeLarge,
-                      textStyle: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.w500,
-                          color: ColorResources.txcolour)),
+                  style: GoogleFonts.poppins(fontSize: Dimensions.fontSizeLarge, textStyle: TextStyle(fontSize: 20, fontWeight: FontWeight.w500, color: ColorResources.txcolour)),
                 ),
               ),
             ),
@@ -253,12 +239,7 @@ class CustomButton3 extends StatelessWidget {
                 colors: <Color>[Colors.white, Colors.white, Color(0xff585aa8)],
                 stops: <double>[0, 0.878, 0.982],
               ),
-              boxShadow: [
-                BoxShadow(
-                    color: Color.fromARGB(84, 158, 158, 158),
-                    blurRadius: 4,
-                    offset: Offset(0, 3))
-              ],
+              boxShadow: [BoxShadow(color: Color.fromARGB(84, 158, 158, 158), blurRadius: 4, offset: Offset(0, 3))],
             ),
             child: Center(
               child: Row(
@@ -270,8 +251,7 @@ class CustomButton3 extends StatelessWidget {
                   ),
                   Icon(
                     Icons.star, // Replace Icons.star with your desired icon
-                    color: Colors
-                        .grey, // Customize the icon color as per your requirement
+                    color: Colors.grey, // Customize the icon color as per your requirement
                   ),
                   SizedBox(width: 10), // Optional SizedBox for spacing
                   Text(

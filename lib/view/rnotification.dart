@@ -1,10 +1,10 @@
-import 'package:eduzet/view/ohome.dart';
+import 'package:eduzet/view/home_screen/home_screen.dart';
 import 'package:eduzet/view/pnotification.dart';
 import 'package:eduzet/view/qwhishlist.dart';
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 
-import '../widgets/colour.dart';
+import 'package:eduzet/utill/colour.dart';
 
 class notification extends StatefulWidget {
   const notification({super.key});
@@ -22,52 +22,38 @@ class _notificationState extends State<notification> {
         margin: EdgeInsets.all(5),
         height: 60,
         width: double.infinity,
-        decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(50),
-            color: ColorResources.btcolour),
-        child: GNav(
-            color: Colors.transparent,
-            activeColor: Colors.white,
-            tabBackgroundColor: Color.fromARGB(80, 4, 50, 158),
-            curve: Curves.easeOutExpo,
-            padding: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
-            gap: 4,
-            tabs: [
-              GButton(
-                  icon: Icons.monitor,
-                  iconColor: Colors.white,
-                  text: 'Home',
-                  onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => DefaultHome()));
-                  }),
-              GButton(
-                  icon: Icons.work_sharp,
-                  iconColor: Colors.white,
-                  text: 'Notification',
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => noNotification()));
-                  }),
-              GButton(
-                  icon: Icons.heart_broken,
-                  iconColor: Colors.white,
-                  text: 'Whishlist',
-                  onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => nowhishlist()));
-                  }),
-              GButton(
-                  icon: Icons.call,
-                  iconColor: Colors.white,
-                  text: 'Call Us',
-                  onPressed: () {
-                    // Navigator.push(context,
-                    //     MaterialPageRoute(builder: (context) => DefaultHome()));
-                  }),
-            ]),
+        decoration: BoxDecoration(borderRadius: BorderRadius.circular(50), color: ColorResources.btcolour),
+        child: GNav(color: Colors.transparent, activeColor: Colors.white, tabBackgroundColor: Color.fromARGB(80, 4, 50, 158), curve: Curves.easeOutExpo, padding: EdgeInsets.symmetric(horizontal: 15, vertical: 15), gap: 4, tabs: [
+          GButton(
+              icon: Icons.monitor,
+              iconColor: Colors.white,
+              text: 'Home',
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen()));
+              }),
+          GButton(
+              icon: Icons.work_sharp,
+              iconColor: Colors.white,
+              text: 'Notification',
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => noNotification()));
+              }),
+          GButton(
+              icon: Icons.heart_broken,
+              iconColor: Colors.white,
+              text: 'Whishlist',
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => nowhishlist()));
+              }),
+          GButton(
+              icon: Icons.call,
+              iconColor: Colors.white,
+              text: 'Call Us',
+              onPressed: () {
+                // Navigator.push(context,
+                //     MaterialPageRoute(builder: (context) => DefaultHome()));
+              }),
+        ]),
       ),
       appBar: AppBar(
         leading: const BackButton(

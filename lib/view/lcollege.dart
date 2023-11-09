@@ -7,7 +7,7 @@ import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
-import '../widgets/colour.dart';
+import 'package:eduzet/utill/colour.dart';
 
 class CollegePage extends StatefulWidget {
   const CollegePage({super.key});

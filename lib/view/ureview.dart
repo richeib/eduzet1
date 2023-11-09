@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../widgets/colour.dart';
+import 'package:eduzet/utill/colour.dart';
 
 class Review extends StatefulWidget {
   const Review({super.key});
@@ -49,8 +49,7 @@ class _ReviewState extends State<Review> {
         actions: [
           InkWell(
             onTap: () {
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => Profile2()));
+              Navigator.push(context, MaterialPageRoute(builder: (context) => Profile2()));
             },
             child: Container(
               margin: EdgeInsets.all(10),
@@ -68,10 +67,7 @@ class _ReviewState extends State<Review> {
         Center(
           child: Text(
             'Rating and Reviews',
-            style: TextStyle(
-                color: Colors.black,
-                fontSize: Dimensions.fontSizeLarge,
-                fontWeight: FontWeight.w700),
+            style: TextStyle(color: Colors.black, fontSize: Dimensions.fontSizeLarge, fontWeight: FontWeight.w700),
           ),
         ),
         Container(
