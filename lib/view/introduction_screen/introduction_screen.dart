@@ -57,12 +57,7 @@ class _IndroductionScreenState extends State<IndroductionScreen> {
             ),
             showSkipButton: true,
             onDone: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => OtpScreen(),
-                ),
-              );
+              Navigator.pushNamed(context, 'otp_screen');
             },
             next: Text(
               'Next',

@@ -6,14 +6,14 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:pinput/pinput.dart';
 
-class opt extends StatefulWidget {
+class Otp extends StatefulWidget {
   @override
-  State<opt> createState() => _optState();
+  State<Otp> createState() => _OtpState();
   @override
   String toStringShort() => 'With Bottom Cursor';
 }
 
-class _optState extends State<opt> {
+class _OtpState extends State<Otp> {
   final controller = TextEditingController();
   final focusNode = FocusNode();
 

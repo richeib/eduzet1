@@ -13,7 +13,16 @@ class CourseSelection extends StatefulWidget {
 }
 
 class _CourseSelectionState extends State<CourseSelection> {
-  bool _isFavorited = true;
+  List<bool> isLikedList = List.generate(20, (index) => false);
+
+  void toggleLike(int index) {
+    setState(
+      () {
+        isLikedList[index] = !isLikedList[index];
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -141,21 +150,20 @@ class _CourseSelectionState extends State<CourseSelection> {
                               //   color: Colors.grey,
                               // ),
                               // Image.asset('assets/Like.png')
-                              IconButton(
-                                padding: const EdgeInsets.all(0),
-                                alignment: Alignment.centerRight,
-                                icon: (_isFavorited
-                                    ? const Icon(
-                                        Icons.favorite_border_outlined,
-                                        size: 35,
-                                      )
-                                    : const Icon(
-                                        Icons.favorite,
-                                        size: 35,
-                                      )),
-                                color: Colors.grey,
-                                onPressed: _toggleFavorite,
-                              ),
+                              GestureDetector(
+                                onTap: () {
+                                  setState(() {
+                                    toggleLike(index);
+                                  });
+                                },
+                                child: isLikedList[index]
+                                    ? Image.asset(width: 30, height: 30, 'assets/liked.png')
+                                    : Image.asset(
+                                        width: 30,
+                                        height: 30,
+                                        'assets/Like.png',
+                                      ),
+                              )
                             ],
                           )
                         ],
@@ -236,15 +244,5 @@ class _CourseSelectionState extends State<CourseSelection> {
         ],
       ),
     );
-  }
-
-  void _toggleFavorite() {
-    setState(() {
-      if (_isFavorited) {
-        _isFavorited = false;
-      } else {
-        _isFavorited = true;
-      }
-    });
   }
 }

@@ -1,5 +1,5 @@
 import 'package:eduzet/utill/dimensions.dart';
-import 'package:eduzet/view/course_selection.dart';
+import 'package:eduzet/view/course_selection/course_selection.dart';
 import 'package:eduzet/view/tprofile.dart';
 import 'package:eduzet/utill/colour.dart';
 import 'package:eduzet/widgets/custom_button.dart';

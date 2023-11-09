@@ -90,7 +90,7 @@ class OtpScreen extends StatelessWidget {
             ),
             CustomButton(
               onTap: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => opt()));
+                Navigator.pushNamed(context, 'otp');
               },
               btnTxt: "GET OTP",
             ),

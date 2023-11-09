@@ -6,8 +6,8 @@ import 'package:eduzet/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class selectLocation extends StatelessWidget {
-  const selectLocation({super.key});
+class SelectLocation extends StatelessWidget {
+  const SelectLocation({super.key});
 
   @override
   Widget build(BuildContext context) {

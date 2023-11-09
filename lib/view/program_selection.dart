@@ -99,21 +99,21 @@ class _ProgramselectionState extends State<Programselection> {
                 ),
                 CustomButton1(
                   onTap: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => const selectLocation()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => const SelectLocation()));
                   },
                   btnTxta: "Under Graduation",
                   btnTxta1: '3-4 years course',
                 ),
                 CustomButton1(
                   onTap: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => const selectLocation()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => const SelectLocation()));
                   },
                   btnTxta: "Post Graduation",
                   btnTxta1: '2-3 years course',
                 ),
                 CustomButton1(
                   onTap: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => selectLocation()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => SelectLocation()));
                   },
                   btnTxta: "Diploma program",
                   btnTxta1: '3-4 years course',

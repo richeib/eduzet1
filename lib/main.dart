@@ -1,4 +1,5 @@
 import 'package:eduzet/utill/routes.dart';
+import 'package:eduzet/view/test/textchange.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
             ),
             primarySwatch: Colors.blue,
           ),
-          // home: IntroductionScreen()
+          // home: MyWindowsLinearProgressIndicator()
           initialRoute: '/',
           onGenerateRoute: RouteGenerator.generatorRoute,
         );
